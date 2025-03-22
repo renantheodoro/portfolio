@@ -1,0 +1,41 @@
+// Define breakpoints for mobile and desktop
+$breakpoints: (
+  "mobile": 375px,
+  // Mobile first
+  "desktop": 1024px,
+);
+
+/** 
+ * Breakpoint function
+ * Receives a key (e.g., 'mobile' or 'desktop') and returns the associated value from the breakpoints map.
+ */
+@function breakpoint($key) {
+  @return map-get($breakpoints, $key);
+}
+
+/** 
+ * Container class styles 
+ * - The container is mobile-first, with a default width of 100% and padding applied for mobile.
+ * - For desktop, max-width and padding adjustments are made.
+ */
+.container {
+  margin: 0 auto;
+  position: relative;
+  max-width: 100%; /** Full width by default for mobile */
+  width: 100%;
+  padding: 0 1rem; /** Mobile padding */
+
+  /** 
+   * For desktop, apply max-width and adjust padding 
+   * - Uses the breakpoint function to target the desktop size.
+   */
+  @media screen and (min-width: breakpoint("desktop")) {
+    max-width: 1024px;
+    padding: 0; /** Remove padding for desktop */
+  }
+
+  /** 
+   * Mobile-first approach: Default styles already apply to mobile,
+   * no additional mobile styles are necessary, but this is where you could add mobile-specific adjustments if needed.
+   */
+}
