@@ -1,17 +1,4 @@
-// Define breakpoints for mobile and desktop
-$breakpoints: (
-  "mobile": 375px,
-  // Mobile first
-  "desktop": 1024px,
-);
-
-/** 
- * Breakpoint function
- * Receives a key (e.g., 'mobile' or 'desktop') and returns the associated value from the breakpoints map.
- */
-@function breakpoint($key) {
-  @return map-get($breakpoints, $key);
-}
+@import "@/styles/_functions.scss";
 
 /** 
  * Container class styles 
@@ -38,4 +25,104 @@ $breakpoints: (
    * Mobile-first approach: Default styles already apply to mobile,
    * no additional mobile styles are necessary, but this is where you could add mobile-specific adjustments if needed.
    */
+}
+
+.text-frame {
+  &:not(.flex) {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  font-size: 1rem;
+  color: var(--grey);
+  padding: 0.5rem;
+  border: 1px solid var(--grey);
+
+  &__shape {
+    width: 1rem;
+    height: 1rem;
+
+    background-color: var(--primary);
+
+    margin-right: 0.5rem;
+  }
+
+  &--center {
+    margin: 0 auto;
+  }
+
+  &--medium-pad {
+    width: 100%;
+    padding: 1rem;
+    
+    @media screen and (min-width: breakpoint('tablet')) {
+      width: auto;
+      min-width: 320px;
+    }
+  }
+
+  strong {
+    font-weight: bold;
+  }
+}
+
+.simple-logo {
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    font-size: 1rem;
+    color: var(--white);
+    font-weight: bold;
+  }
+
+  img {
+    margin-right: 0.5rem;
+  }
+}
+
+.section-block {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .section-block__header__line {
+      width: 500px;
+      height: 1px;
+      background-color: var(--primary);
+      margin-left: 1rem;
+    }
+
+    h2 {
+      position: relative;
+
+      span {
+        font-size: inherit;
+        color: var(--primary);
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+
+    &__text {
+      margin-bottom: 1rem;
+
+      strong {
+        color: var(--white);
+      }
+    }
+  }
 }

@@ -1,0 +1,31 @@
+.header {
+  padding: 2rem 0;
+
+  &__menu {
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__item {
+      margin-left: 1rem;
+
+      a {
+        color: var(--grey);
+
+        &:hover {
+          color: var(--white);
+          span {
+            color: var(--primary);
+          }
+        }
+      }
+
+      &:hover,
+      & > a span {
+        color: var(--primary);
+      }
+    }
+  }
+}

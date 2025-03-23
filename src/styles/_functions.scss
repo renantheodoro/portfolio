@@ -1,0 +1,13 @@
+$breakpoints: (
+  "mobile": 767px,
+  "tablet": 1024px,
+  "desktop": 1025px,
+);
+
+/** 
+ * Breakpoint function
+ * Receives a key (e.g., 'mobile' or 'desktop') and returns the associated value from the breakpoints map.
+ */
+@function breakpoint($key) {
+  @return map-get($breakpoints, $key);
+}

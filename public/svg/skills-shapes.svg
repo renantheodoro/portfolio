@@ -1,0 +1,63 @@
+<svg width="216" height="347" viewBox="0 0 216 347" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="17" cy="38" r="2" fill="#ABB2BF"/>
+<circle cx="31.75" cy="38" r="2" fill="#ABB2BF"/>
+<circle cx="46.5" cy="38" r="2" fill="#ABB2BF"/>
+<circle cx="61.25" cy="38" r="2" fill="#ABB2BF"/>
+<circle cx="76" cy="38" r="2" fill="#ABB2BF"/>
+<circle cx="17" cy="52.75" r="2" fill="#ABB2BF"/>
+<circle cx="31.75" cy="52.75" r="2" fill="#ABB2BF"/>
+<circle cx="46.5" cy="52.75" r="2" fill="#ABB2BF"/>
+<circle cx="61.25" cy="52.75" r="2" fill="#ABB2BF"/>
+<circle cx="76" cy="52.75" r="2" fill="#ABB2BF"/>
+<circle cx="17" cy="67.5" r="2" fill="#ABB2BF"/>
+<circle cx="31.75" cy="67.5" r="2" fill="#ABB2BF"/>
+<circle cx="46.5" cy="67.5" r="2" fill="#ABB2BF"/>
+<circle cx="61.25" cy="67.5" r="2" fill="#ABB2BF"/>
+<circle cx="76" cy="67.5" r="2" fill="#ABB2BF"/>
+<circle cx="17" cy="82.25" r="2" fill="#ABB2BF"/>
+<circle cx="31.75" cy="82.25" r="2" fill="#ABB2BF"/>
+<circle cx="46.5" cy="82.25" r="2" fill="#ABB2BF"/>
+<circle cx="61.25" cy="82.25" r="2" fill="#ABB2BF"/>
+<circle cx="76" cy="82.25" r="2" fill="#ABB2BF"/>
+<circle cx="17" cy="97" r="2" fill="#ABB2BF"/>
+<circle cx="31.75" cy="97" r="2" fill="#ABB2BF"/>
+<circle cx="46.5" cy="97" r="2" fill="#ABB2BF"/>
+<circle cx="61.25" cy="97" r="2" fill="#ABB2BF"/>
+<circle cx="76" cy="97" r="2" fill="#ABB2BF"/>
+<circle cx="150" cy="265" r="2" fill="#ABB2BF"/>
+<circle cx="164.75" cy="265" r="2" fill="#ABB2BF"/>
+<circle cx="179.5" cy="265" r="2" fill="#ABB2BF"/>
+<circle cx="194.25" cy="265" r="2" fill="#ABB2BF"/>
+<circle cx="209" cy="265" r="2" fill="#ABB2BF"/>
+<circle cx="150" cy="279.75" r="2" fill="#ABB2BF"/>
+<circle cx="164.75" cy="279.75" r="2" fill="#ABB2BF"/>
+<circle cx="179.5" cy="279.75" r="2" fill="#ABB2BF"/>
+<circle cx="194.25" cy="279.75" r="2" fill="#ABB2BF"/>
+<circle cx="209" cy="279.75" r="2" fill="#ABB2BF"/>
+<circle cx="150" cy="294.5" r="2" fill="#ABB2BF"/>
+<circle cx="164.75" cy="294.5" r="2" fill="#ABB2BF"/>
+<circle cx="179.5" cy="294.5" r="2" fill="#ABB2BF"/>
+<circle cx="194.25" cy="294.5" r="2" fill="#ABB2BF"/>
+<circle cx="209" cy="294.5" r="2" fill="#ABB2BF"/>
+<circle cx="150" cy="309.25" r="2" fill="#ABB2BF"/>
+<circle cx="164.75" cy="309.25" r="2" fill="#ABB2BF"/>
+<circle cx="179.5" cy="309.25" r="2" fill="#ABB2BF"/>
+<circle cx="194.25" cy="309.25" r="2" fill="#ABB2BF"/>
+<circle cx="209" cy="309.25" r="2" fill="#ABB2BF"/>
+<circle cx="150" cy="324" r="2" fill="#ABB2BF"/>
+<circle cx="164.75" cy="324" r="2" fill="#ABB2BF"/>
+<circle cx="179.5" cy="324" r="2" fill="#ABB2BF"/>
+<circle cx="194.25" cy="324" r="2" fill="#ABB2BF"/>
+<circle cx="209" cy="324" r="2" fill="#ABB2BF"/>
+<rect x="0.5" y="295.5" width="51" height="51" stroke="#ABB2BF"/>
+<rect x="130.5" y="0.5" width="85" height="85" stroke="#ABB2BF"/>
+<mask id="path-53-inside-1_29_371" fill="white">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M91.5 134H119.75H148V162.25V190.5V218.75H119.75H91.5V190.5H119.75V162.25H91.5V134Z"/>
+</mask>
+<path d="M91.5 134V133H90.5V134H91.5ZM148 134H149V133H148V134ZM148 218.75V219.75H149V218.75H148ZM91.5 218.75H90.5V219.75H91.5V218.75ZM91.5 190.5V189.5H90.5V190.5H91.5ZM119.75 190.5V191.5H120.75V190.5H119.75ZM119.75 162.25H120.75V161.25H119.75V162.25ZM91.5 162.25H90.5V163.25H91.5V162.25ZM119.75 133H91.5V135H119.75V133ZM148 133H119.75V135H148V133ZM149 162.25V134H147V162.25H149ZM149 190.5V162.25H147V190.5H149ZM149 218.75V190.5H147V218.75H149ZM119.75 219.75H148V217.75H119.75V219.75ZM119.75 217.75H91.5V219.75H119.75V217.75ZM92.5 218.75V190.5H90.5V218.75H92.5ZM91.5 191.5H119.75V189.5H91.5V191.5ZM118.75 162.25V190.5H120.75V162.25H118.75ZM91.5 163.25H119.75V161.25H91.5V163.25ZM90.5 134V162.25H92.5V134H90.5Z" fill="#C778DD" mask="url(#path-53-inside-1_29_371)"/>
+<mask id="path-55-outside-2_29_371" maskUnits="userSpaceOnUse" x="34" y="161.25" width="59" height="87" fill="black">
+<rect fill="white" x="34" y="161.25" width="59" height="87"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M35 162.25H63.25H91.5V190.5H63.25V218.75H91.5V247H63.25H35V218.75V190.5V162.25Z"/>
+</mask>
+<path d="M35 162.25V161.25H34V162.25H35ZM91.5 162.25H92.5V161.25H91.5V162.25ZM91.5 190.5V191.5H92.5V190.5H91.5ZM63.25 190.5V189.5H62.25V190.5H63.25ZM63.25 218.75H62.25V219.75H63.25V218.75ZM91.5 218.75H92.5V217.75H91.5V218.75ZM91.5 247V248H92.5V247H91.5ZM35 247H34V248H35V247ZM63.25 161.25H35V163.25H63.25V161.25ZM91.5 161.25H63.25V163.25H91.5V161.25ZM92.5 190.5V162.25H90.5V190.5H92.5ZM63.25 191.5H91.5V189.5H63.25V191.5ZM64.25 218.75V190.5H62.25V218.75H64.25ZM63.25 219.75H91.5V217.75H63.25V219.75ZM90.5 218.75V247H92.5V218.75H90.5ZM91.5 246H63.25V248H91.5V246ZM35 248H63.25V246H35V248ZM34 218.75V247H36V218.75H34ZM34 190.5V218.75H36V190.5H34ZM34 162.25V190.5H36V162.25H34Z" fill="#C778DD" mask="url(#path-55-outside-2_29_371)"/>
+</svg>
