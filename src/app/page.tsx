@@ -14,7 +14,7 @@ export default function HomePage() {
         `}
       >
         <div className="container flex flex-col md:flex-row lg:flex-row w-full justify-between items-center">
-          <div className="w-full md:w-1/2 lg:w-1/2">
+          <div className="w-full md:w-1/2 lg:w-1/2 pl-1">
             <h2 className={`${styles["main-section__title"]}`}>
               Renan is a <strong>front-end</strong> and <strong>mobile</strong>{" "}
               developer
@@ -25,12 +25,12 @@ export default function HomePage() {
             </p>
             <Button path="/contacts" text="GET IN TOUCH" />
           </div>
-          <div className="w-full md:w-1/2 lg:w-1/2 flex flex-col">
+          <div className="w-full md:w-1/2 lg:w-1/2 flex flex-col pl-1">
             <Image
               src="/images/main-profile-image.png"
               alt="Renan Theodoro"
-              width={500} // Defina a largura desejada
-              height={500} // Defina a altura desejada
+              width={500}
+              height={500}
             />
 
             <div className="text-frame text-frame--center">
@@ -72,7 +72,7 @@ export default function HomePage() {
               </h2>
               <div className="hidden md:block section-block__header__line"></div>
             </div>
-            <Link href="/projects">View all ~~&gt;</Link>
+            <Link href="/works">View all ~~&gt;</Link>
           </div>
 
           <div className="section-block__content gap-4">
@@ -233,12 +233,14 @@ export default function HomePage() {
           </div>
 
           <div className="section-block__content justify-between">
-            <div className="w-full md:w-1/2 lg:w-1/2">
-              <p className="section-block__content__text">
-                Hello, i’m Renan Theodoro!
+            <div className="w-full flex-col md:w-1/2 lg:w-1/2">
+              <p>
+                <strong>Who am I?</strong>
               </p>
 
-              <p className="section-block__content__text">
+              <p>Hello, i’m Renan Theodoro!</p>
+
+              <p>
                 I’m a Senior Software Developer with{" "}
                 <strong>over 10 years of experience</strong>
                 in <strong>web and mobile</strong> app development, I specialize
@@ -288,52 +290,56 @@ export default function HomePage() {
 
           <div className="section-block__content justify-between">
             <div className="flex w-full md:w-1/2 lg:w-1/2">
-              <p className="section-block__content__text">
-                If you're seeking an experienced software developer, I'd love to
-                connect and discuss how I can contribute to your team. With
-                expertise in front-end development, modern web frameworks, and
-                mobile app development, I'm confident in delivering scalable,
-                high-quality solutions. Let’s connect and explore opportunities
-                to work together!
+              <p>
+                If you&apos;re seeking an{" "}
+                <strong>experienced software developer</strong>, I&apos;d love
+                to connect and discuss how I can{" "}
+                <strong>contribute to your team</strong>. With expertise in
+                <strong>front-end development</strong>,{" "}
+                <strong>modern web frameworks</strong>, and{" "}
+                <strong>mobile app development</strong>, I&apos;m confident in
+                delivering <strong>scalable</strong>,{" "}
+                <strong>high-quality solutions</strong>. <br />
+                Let’s connect and explore opportunities to work together!
               </p>
             </div>
             <div className="flex items-center justify-end w-full md:w-1/2 lg:w-1/2 ">
               <div className="text-frame text-frame--medium-pad flex-shrink-0 flex flex-col items-start justify-start">
-                <p className="section-block__content__text">
+                <p>
                   <strong>Message me here</strong>
                 </p>
-                <ul className="flex flex-col justify-center items-start">
-                  <li>
+
+                <div className="flex flex-row mt-4">
+                  <div className="flex flex-col justify-center items-start gap-1">
                     <Link
-                      href="https://github.com/renantheodoro"
+                      href="mailto:renan.b.theodoro@gmail.com"
                       target="_blank"
                       className="flex flex-row items-center"
                     >
                       <Image
-                        src="/svg/github.svg"
-                        alt="github"
+                        src="/svg/email.svg"
+                        alt="email"
                         width={32}
                         height={32}
                       />
-                      <span className="ml-2">Github</span>
+                      <span className="ml-2">renan.b.theodoro@gmail.com</span>
                     </Link>
-                  </li>
-                  <li>
+
                     <Link
-                      href="https://www.linkedin.com/in/renantheodoro/"
+                      href="tel:5511936190701"
                       target="_blank"
                       className="flex flex-row items-center"
                     >
                       <Image
-                        src="/svg/linkedin.svg"
-                        alt="linkedin"
+                        src="/svg/telegram.svg"
+                        alt="telegram"
                         width={32}
                         height={32}
                       />
-                      <span className="ml-2">Linkedin</span>
+                    <span className="ml-2">+55 (11) 93619-0701</span>
                     </Link>
-                  </li>
-                </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

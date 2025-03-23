@@ -2,6 +2,7 @@
 
 .project-item {
   width: 100%;
+  max-width: 420px;
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
@@ -19,9 +20,14 @@
   &__media {
     height: 200px;
     width: 100%;
-    object-fit: cover;
-    object-position: center;
     overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
   }
 
   &__techs {

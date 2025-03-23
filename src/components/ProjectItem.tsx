@@ -4,7 +4,7 @@ import style from "@/styles/components/ProjectItem.module.scss";
 import Image from "next/image";
 
 interface ProjectItemProps {
-  mediaPath: string;
+  mediaPath?: string;
   techs: Array<string>;
   title: string;
   description: string;
@@ -24,14 +24,16 @@ export default function ProjectItem({
 }: ProjectItemProps) {
   return (
     <div className={`${style["project-item"]}`}>
-      <div className={`${style["project-item__media"]}`}>
-        <Image
-          src={mediaPath}
-          alt={mediaPath.toString()}
-          width={500}
-          height={300}
-        />
-      </div>
+      {mediaPath ? (
+        <div className={`${style["project-item__media"]}`}>
+          <Image
+            src={mediaPath}
+            alt={mediaPath.toString()}
+            width={420}
+            height={420}
+          />
+        </div>
+      ) : null}
       <div className={`${style["project-item__techs"]}`}>
         {buildTechs(techs)}
       </div>

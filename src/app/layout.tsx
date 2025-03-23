@@ -74,13 +74,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* O Header será renderizado antes do conteúdo da página */}
         <Header />
-
-        {/* O conteúdo da página será injetado aqui */}
         <main>{children}</main>
-
-        {/* O Footer será renderizado após o conteúdo da página */}
         <Footer />
       </body>
     </html>

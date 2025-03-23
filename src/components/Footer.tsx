@@ -8,7 +8,8 @@ export default function Footer() {
       <div className="container">
         <div className="flex flex-col">
           <div className="flex flex-row justify-between">
-            <div className="flex flex-col">
+
+            <div className="w-1/2 flex flex-col">
               <div className="flex justify-start items-center mb-2">
                 <div className="simple-logo flex justify-between">
                   <Image
@@ -28,33 +29,52 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="flex flex-col justify-start">
+            <div className="w-1/2 flex flex-col items-start">
               <h3>Media</h3>
-              <ul className="flex justify-start">
-                <li className="mr-4">
-                  <Link href="https://github.com/renantheodoro" target="_blank">
-                    <Image
-                      src="/svg/github.svg"
-                      alt="github"
-                      width={32}
-                      height={32}
-                    />
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="https://www.linkedin.com/in/renantheodoro/"
-                    target="_blank"
-                  >
-                    <Image
-                      src="/svg/linkedin.svg"
-                      alt="linkedin"
-                      width={32}
-                      height={32}
-                    />
-                  </Link>
-                </li>
-              </ul>
+
+              <div className="flex flex-row flex-wrap items-start gap-4 mt-2">
+                <Link
+                  href="https://www.instagram.com/renantheodoro"
+                  target="_blank"
+                  className="flex flex-row items-center"
+                >
+                  <Image
+                    src="/svg/instagram.svg"
+                    alt="instagram"
+                    width={32}
+                    height={32}
+                  />
+                  <span className="ml-2">Instagram</span>
+                </Link>
+
+                <Link
+                  href="https://github.com/renantheodoro"
+                  target="_blank"
+                  className="flex flex-row items-center"
+                >
+                  <Image
+                    src="/svg/github.svg"
+                    alt="github"
+                    width={32}
+                    height={32}
+                  />
+                  <span className="ml-2">Github</span>
+                </Link>
+
+                <Link
+                  href="https://www.linkedin.com/in/renantheodoro/"
+                  target="_blank"
+                  className="flex flex-row items-center"
+                >
+                  <Image
+                    src="/svg/linkedin.svg"
+                    alt="linkedin"
+                    width={32}
+                    height={32}
+                  />
+                  <span className="ml-2">Linkedin</span>
+                </Link>
+              </div>
             </div>
           </div>
 
