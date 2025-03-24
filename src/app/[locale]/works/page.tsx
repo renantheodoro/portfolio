@@ -1,15 +1,19 @@
+import { useTranslations } from "next-intl";
 import Button from "@/components/ButtonLink";
 import ProjectItem from "@/components/ProjectItem";
 
 export default function WorksPage() {
+  const t = useTranslations("works_page");
+
   return (
     <>
       <div className="page-title">
         <div className="container">
           <h1>
-            <span>/</span>projects
+            <span>/</span>
+            {t("title")}
           </h1>
-          <p>List of my projects</p>
+          <p>{t("subtitle")}</p>
         </div>
       </div>
 
@@ -18,7 +22,8 @@ export default function WorksPage() {
           <div className="section-block__header">
             <div className="flex flex-row justify-start items-center">
               <h2>
-                <span>#</span>complete-apps
+                <span>#</span>
+                {t("complete_apps_section.title")}
               </h2>
             </div>
           </div>
@@ -78,7 +83,8 @@ export default function WorksPage() {
           <div className="section-block__header">
             <div className="flex flex-row justify-start items-center">
               <h2>
-                <span>#</span>small-projects
+                <span>#</span>
+                {t("small_projects_section.title")}
               </h2>
             </div>
           </div>

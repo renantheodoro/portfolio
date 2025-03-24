@@ -1,15 +1,20 @@
+import { useTranslations } from "next-intl";
+
 import Link from "next/link";
 import Image from "next/image";
+import CustomMarkdown from "@/components/CustomMarkdown";
 
-export default function WorksPage() {
+export default function ContactsPage() {
+  const t = useTranslations("contacts_page");
+
   return (
     <>
       <div className="page-title">
         <div className="container">
           <h1>
-            <span>/</span>contacts
+            <span>/</span>
+            {t("title")}
           </h1>
-          <p>List of my projects</p>
         </div>
       </div>
 
@@ -17,27 +22,12 @@ export default function WorksPage() {
         <div className="container">
           <div className="section-block__content justify-between">
             <div className="w-full md:w-1/2 lg:w-1/2 flex flex-col pr-1">
-              <p>
-                <strong>Who am I?</strong>
-              </p>
-
-              <p>
-                If you&apos;re seeking an{" "}
-                <strong>experienced software developer</strong>, I&apos;d love
-                to connect and discuss how I can{" "}
-                <strong>contribute to your team</strong>. With expertise in
-                <strong>front-end development</strong>,{" "}
-                <strong>modern web frameworks</strong>, and{" "}
-                <strong>mobile app development</strong>, I&apos;m confident in
-                delivering <strong>scalable</strong>,{" "}
-                <strong>high-quality solutions</strong>. <br />
-                Let’s connect and explore opportunities to work together!
-              </p>
+              <CustomMarkdown>{t("content")}</CustomMarkdown>
             </div>
             <div className="flex items-center justify-end w-full md:w-1/2 lg:w-1/2 ">
               <div className="text-frame text-frame--medium-pad flex-shrink-0 flex flex-col items-start justify-start">
                 <p>
-                  <strong>Message me here</strong>
+                  <strong>{t("message_me")}</strong>
                 </p>
 
                 <div className="flex flex-row mt-4">
@@ -82,7 +72,8 @@ export default function WorksPage() {
           <div className="section-block__header">
             <div className="flex flex-row justify-start items-center">
               <h2>
-                <span>#</span>all-media
+                <span>#</span>
+                {t("all_media_section.title")}
               </h2>
               <div className="hidden md:block section-block__header__line"></div>
             </div>

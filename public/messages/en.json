@@ -113,5 +113,23 @@
         "techs": "JavaScript, CSS3, ECMAScript, Adobe Photoshop, GitFlow, WordPress, CSS, jQuery, HTML5, Git, HTML"
       }
     }
+  },
+  "works_page": {
+    "title": "projects",
+    "subtitle": "List of my projects",
+    "complete_apps_section": {
+      "title": "complete-apps"
+    },
+    "small_projects_section": {
+      "title": "small-projects"
+    }
+  },
+  "contacts_page": {
+    "title": "contacts",
+    "content": "\n\n**Who am I?** \n\nIf you’re seeking an **experienced software developer**, I’d love to connect and discuss how I can **contribute to your team**. With expertise in **front-end development**, **modern web frameworks**, and **mobile app development**, I’m confident in delivering **scalable**, **high-quality solutions**.  \n\n**Let’s connect and explore opportunities to work together!**",
+    "message_me": "Message me here",
+    "all_media_section": {
+        "title": "all-media"
+    }
   }
 }
