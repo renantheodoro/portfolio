@@ -15,7 +15,7 @@ export default function Footer() {
                   <Image
                     width={16}
                     height={16}
-                    src="svg/logo-white.svg"
+                    src="/svg/logo-white.svg"
                     alt="Logo white"
                   />
                   <span>Renan Theodoro</span>
