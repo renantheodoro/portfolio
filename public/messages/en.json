@@ -1,0 +1,66 @@
+{
+  "language": {
+    "current_language": "EN"
+  },
+  "header_menu": {
+    "links": {
+      "home": "home",
+      "about_me": "about-me",
+      "experiences": "experiences",
+      "works": "works",
+      "contacts": "contacts"
+    }
+  },
+  "home_page": {
+    "main_section": {
+      "title": "## Renan is a **front-end** and **mobile** developer",
+      "text": "He builds scalable and efficient solutions using modern technologies.",
+      "button_text": "GET IN TOUCH",
+      "current_job_info": "Currently working at **Santander**"
+    },
+    "quote_section": {
+      "quote": "The only way to go fast is to go well.",
+      "author": "- Robin C. Martin"
+    },
+    "projects_section": {
+      "title": "projects",
+      "view_all": "View all"
+    },
+    "skills_section": {
+      "title": "skills",
+      "skills_list": {
+        "languages_title": "Languages",
+        "frameworks_title": "Frameworks & Libraries",
+        "tools_devops_title": "Tools & Devops",
+        "databases_title": "Databases",
+        "arch_best_practices_title": "Architecture & Best Practices",
+        "other_skills_title": "Other Skills",
+        "testings_title": "Testings"
+      }
+    },
+    "about_section": {
+      "title": "about-me",
+      "text": "**Who am I?**\n\nHello, i’m Renan Theodoro!\n\nI’m a Senior Software Developer with **over 10 years of experience** in **web and mobile** app development, I specialize in frameworks like **Flutter, React, Angular**, and **Vue.js**, focusing on **performance**, **scalability**, and **clean software architecture**.\n\nI’m passionate about **Clean Code**, **SOLID principles**, and creating **maintainable**, **high-quality** solutions.\n\nMy skills extend to **API integration**, **state management**, and **full-stack development** with technologies like **Node.js, Firebase**, and **PHP**.\n\nCurrently, I’m expanding my expertise in **Next.js** and **React Native**.\n\n**Let’s build something amazing together**!",
+      "button_text": "Read more"
+    },
+    "contacts_section": {
+      "title": "contacts",
+      "text": "If you're seeking an **experienced software developer**, I'd love to connect and discuss how I can **contribute to your team**. With expertise in **front-end development**, **modern web frameworks**, and **mobile app development**, I'm confident in delivering **scalable**, **high-quality solutions**.\n\n**Let’s connect and explore opportunities to work together!**",
+      "message_me": "Message me here"
+    }
+  },
+  "about_me_page": {
+    "title": "about-me",
+    "content": "**Who am I?**\n\nWith over **10 years of experience** in software development, I specialize in web and mobile applications using **Flutter, React, Angular**, and **Vue.js**. My focus is on **performance**, **scalability**, and **clean architecture**, delivering **high-quality**, **user-friendly experiences**.\n\nI’m passionate about **Clean Code**, **SOLID principles**, and ensuring my code is **maintainable** and **scalable**. I also have experience with backend technologies like **Node.js**, **Firebase**, and **PHP**, allowing me to create **full-stack solutions**. Currently, I’m expanding my knowledge in **Next.js** and **React Native** to further enhance the applications I build.\n\n**Let’s create something amazing together!**",
+    "fun_facts_section": {
+      "title": "my-fun-facts",
+      "fun_fact_1": "I **play guitar** in my spare time",
+      "fun_fact_2": "I’m a huge fan of **coffee**",
+      "fun_fact_3": "I love **churrasco**, the Brazilian barbecue",
+      "fun_fact_4": "I know how to solve a Rubik&apos;s cube",
+      "fun_fact_5": "My favorite game is **The Last of Us**",
+      "fun_fact_6": "I have two adorable **cats**",
+      "fun_fact_7": "I believe in the power of **simplicity**, which is why **minimalism** influences me."
+    }
+  }
+}

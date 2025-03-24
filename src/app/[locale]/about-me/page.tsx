@@ -1,8 +1,13 @@
+import { useTranslations } from "next-intl";
 import styles from "@/styles/pages/AboutMe.module.scss";
 import Image from "next/image";
 import SkillBlock from "@/components/SkillBlock";
+import CustomMarkdown from "@/components/CustomMarkdown";
 
 export default function AboutMePage() {
+  const homeT = useTranslations("home_page");
+  const t = useTranslations("about_me_page");
+
   return (
     <div
       className={`
@@ -12,7 +17,8 @@ export default function AboutMePage() {
       <div className="page-title">
         <div className="container">
           <h1>
-            <span>/</span>about-me
+            <span>/</span>
+            {t("title")}
           </h1>
         </div>
       </div>
@@ -21,37 +27,7 @@ export default function AboutMePage() {
         <div className="container">
           <div className="section-block__content justify-between items-start">
             <div className="w-full md:w-1/2 lg:w-1/2 flex flex-col pr-1">
-              <p>
-                <strong>Who am I?</strong>
-              </p>
-
-              <p>
-                With over <strong>10 years of experience</strong> in software
-                development, I specialize in web and mobile applications using{" "}
-                <strong>Flutter, React, Angular</strong>, and{" "}
-                <strong>Vue.js</strong>. My focus is on{" "}
-                <strong>performance</strong>, <strong>scalability</strong>, and
-                <strong>clean architecture</strong>, delivering{" "}
-                <strong>high-quality</strong>,{" "}
-                <strong>user-friendly experiences</strong>.{" "}
-              </p>
-
-              <p>
-                I’m passionate about <strong>Clean Code</strong>,{" "}
-                <strong>SOLID principles</strong>, and ensuring my code is
-                <strong>maintainable</strong> and <strong>scalable</strong>. I
-                also have experience with backend technologies like{" "}
-                <strong>Node.js</strong>, <strong>Firebase</strong>, and{" "}
-                <strong>PHP</strong>, allowing me to create{" "}
-                <strong>full-stack solutions</strong>. Currently, I’m expanding
-                my knowledge in <strong>Next.js</strong> and{" "}
-                <strong>React Native</strong> to further enhance the
-                applications I build.
-              </p>
-
-              <p>
-                <strong> Let’s create something amazing together!</strong>{" "}
-              </p>
+              <CustomMarkdown>{t("content")}</CustomMarkdown>
             </div>
             <div className="w-full md:w-1/2 lg:w-1/2 flex flex-col justify-start pl-1">
               <Image
@@ -71,7 +47,8 @@ export default function AboutMePage() {
           <div className="section-block__header">
             <div className="flex flex-row justify-start items-center">
               <h2>
-                <span>#</span>skills
+                <span>#</span>
+                {homeT("skills_section.title")}
               </h2>
               <div className="hidden md:block section-block__header__line"></div>
             </div>
@@ -94,11 +71,11 @@ export default function AboutMePage() {
             </div>
             <div className="flex flex-col flex-1 basis-full md:basis-[calc(25%-4rem)] lg:basis-[calc(20%-4rem)] space-y-4">
               <SkillBlock
-                title="Languages"
+                title={homeT("skills_section.skills_list.languages_title")}
                 skills={["Javascript", "Dart", "Typescript"]}
               />
               <SkillBlock
-                title="Frameworks & Libraries"
+                title={homeT("skills_section.skills_list.frameworks_title")}
                 skills={[
                   "Flutter React",
                   "React Native",
@@ -112,7 +89,7 @@ export default function AboutMePage() {
             </div>
             <div className="flex flex-col flex-1 basis-full md:basis-[calc(25%-4rem)] lg:basis-[calc(20%-4rem)] space-y-4">
               <SkillBlock
-                title="Tools & Devops"
+                title={homeT("skills_section.skills_list.tools_devops_title")}
                 skills={[
                   "Git",
                   "Git Flow",
@@ -124,14 +101,16 @@ export default function AboutMePage() {
                 startsWithBold={false}
               />
               <SkillBlock
-                title="Databases"
+                title={homeT("skills_section.skills_list.databases_title")}
                 skills={["Firebase"]}
                 skillDescription="Firestore, Realtime Database"
               />
             </div>
             <div className="flex flex-col flex-1 basis-full md:basis-[calc(25%-4rem)] lg:basis-[calc(20%-4rem)] space-y-4">
               <SkillBlock
-                title="Architecture & Best Practices"
+                title={homeT(
+                  "skills_section.skills_list.arch_best_practices_title"
+                )}
                 skills={[
                   "Clean Architecture",
                   "MVVM",
@@ -143,7 +122,7 @@ export default function AboutMePage() {
             </div>
             <div className="flex flex-col flex-1 basis-full md:basis-[calc(25%-4rem)] lg:basis-[calc(20%-4rem)] space-y-4">
               <SkillBlock
-                title="Other Skills"
+                title={homeT("skills_section.skills_list.other_skills_title")}
                 skills={[
                   "REST API GraphQL",
                   "HTML5",
@@ -154,7 +133,7 @@ export default function AboutMePage() {
                 ]}
               />
               <SkillBlock
-                title="Testings"
+                title={homeT("skills_section.skills_list.testings_title")}
                 skills={["Jest Provider", "BLoC", "Jasmine"]}
               />
             </div>
@@ -167,51 +146,53 @@ export default function AboutMePage() {
           <div className="section-block__header">
             <div className="flex flex-row justify-start items-center">
               <h2>
-                <span>#</span>my-fun-facts
+                <span>#</span>
+                {t("fun_facts_section.title")}
               </h2>
             </div>
           </div>
 
           <div className="section-block__content justify-start gap-4">
             <div className="text-frame text-frame--white-highlights">
-              <p>
-                I <strong>play guitar</strong> in my spare time
-              </p>
+              <CustomMarkdown>
+                {t("fun_facts_section.fun_fact_1")}
+              </CustomMarkdown>
             </div>
 
             <div className="text-frame text-frame--white-highlights">
-              <p>
-                I’m a huge fan of <strong>coffee</strong>
-              </p>
+              <CustomMarkdown>
+                {t("fun_facts_section.fun_fact_2")}
+              </CustomMarkdown>
             </div>
 
             <div className="text-frame text-frame--white-highlights">
-              <p>
-                I love <strong>churrasco</strong>, the Brazilian barbecue
-              </p>
+              <CustomMarkdown>
+                {t("fun_facts_section.fun_fact_3")}
+              </CustomMarkdown>
             </div>
 
             <div className="text-frame text-frame--white-highlights">
-              <p>I know how to solve a Rubik&apos;s cube </p>
+              <CustomMarkdown>
+                {t("fun_facts_section.fun_fact_4")}
+              </CustomMarkdown>
             </div>
 
             <div className="text-frame text-frame--white-highlights">
-              <p>
-                My favorite game is <strong>The Last of Us</strong>
-              </p>
+              <CustomMarkdown>
+                {t("fun_facts_section.fun_fact_5")}
+              </CustomMarkdown>
             </div>
 
             <div className="text-frame text-frame--white-highlights">
-              <p>
-                I have two adorable <strong>cats</strong>
-              </p>
+              <CustomMarkdown>
+                {t("fun_facts_section.fun_fact_6")}
+              </CustomMarkdown>
             </div>
 
             <div className="text-frame flex text-frame--white-highlights">
-              <p>
-                I believe in the power of <strong>simplicity</strong>, which is
-                why <strong>minimalism</strong> influences me.{" "}
-              </p>
+              <CustomMarkdown>
+                {t("fun_facts_section.fun_fact_7")}
+              </CustomMarkdown>
             </div>
           </div>
         </div>

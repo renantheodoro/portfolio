@@ -1,11 +1,15 @@
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import styles from "@/styles/pages/Home.module.scss";
 import Link from "next/link";
 import Button from "@/components/ButtonLink";
 import ProjectItem from "@/components/ProjectItem";
 import SkillBlock from "@/components/SkillBlock";
+import CustomMarkdown from "@/components/CustomMarkdown";
 
 export default function HomePage() {
+  const t = useTranslations("home_page");
+
   return (
     <div className="flex flex-col">
       <section
@@ -15,15 +19,17 @@ export default function HomePage() {
       >
         <div className="container flex flex-col md:flex-row lg:flex-row w-full justify-between items-center">
           <div className="w-full md:w-1/2 lg:w-1/2 pl-1">
-            <h2 className={`${styles["main-section__title"]}`}>
-              Renan is a <strong>front-end</strong> and <strong>mobile</strong>{" "}
-              developer
-            </h2>
+            <CustomMarkdown
+              tag="h2"
+              customClass={`${styles["main-section__title"]}`}
+            >
+              {t("main_section.title")}
+            </CustomMarkdown>
+
             <p className={`${styles["main-section__text"]}`}>
-              He builds scalable and efficient solutions using modern
-              technologies.
+              {t("main_section.text")}
             </p>
-            <Button path="/contacts" text="GET IN TOUCH" />
+            <Button path="/contacts" text={t("main_section.button_text")} />
           </div>
           <div className="w-full md:w-1/2 lg:w-1/2 flex flex-col pl-1">
             <Image
@@ -35,9 +41,9 @@ export default function HomePage() {
 
             <div className="text-frame text-frame--center">
               <div className="text-frame__shape"></div>
-              <p>
-                Currently working at <strong>Santander</strong>
-              </p>
+              <CustomMarkdown>
+                {t("main_section.current_job_info")}
+              </CustomMarkdown>
             </div>
           </div>
         </div>
@@ -53,12 +59,12 @@ export default function HomePage() {
           <h3
             className={`${styles["quote-section__sentence"]} ${styles["quote-section__sentence--bigger"]}`}
           >
-            The only way to go fast is to go well.
+            {t("quote_section.quote")}
           </h3>
           <h3
             className={`${styles["quote-section__sentence"]} ${styles["quote-section__sentence--smaller"]}`}
           >
-            - Robin C. Martin
+            {t("quote_section.author")}
           </h3>
         </div>
       </section>
@@ -68,11 +74,12 @@ export default function HomePage() {
           <div className="section-block__header">
             <div className="flex flex-row justify-start items-center">
               <h2>
-                <span>#</span>projects
+                <span>#</span>
+                {t("projects_section.title")}
               </h2>
               <div className="hidden md:block section-block__header__line"></div>
             </div>
-            <Link href="/works">View all ~~&gt;</Link>
+            <Link href="/works">{t("projects_section.view_all")} ~~&gt;</Link>
           </div>
 
           <div className="section-block__content gap-4">
@@ -130,7 +137,8 @@ export default function HomePage() {
           <div className="section-block__header">
             <div className="flex flex-row justify-start items-center">
               <h2>
-                <span>#</span>skills
+                <span>#</span>
+                {t("skills_section.title")}
               </h2>
               <div className="hidden md:block section-block__header__line"></div>
             </div>
@@ -153,11 +161,11 @@ export default function HomePage() {
             </div>
             <div className="flex flex-col flex-1 basis-full md:basis-[calc(25%-4rem)] lg:basis-[calc(20%-4rem)] space-y-4">
               <SkillBlock
-                title="Languages"
+                title={t("skills_section.skills_list.languages_title")}
                 skills={["Javascript", "Dart", "Typescript"]}
               />
               <SkillBlock
-                title="Frameworks & Libraries"
+                title={t("skills_section.skills_list.frameworks_title")}
                 skills={[
                   "Flutter React",
                   "React Native",
@@ -171,7 +179,7 @@ export default function HomePage() {
             </div>
             <div className="flex flex-col flex-1 basis-full md:basis-[calc(25%-4rem)] lg:basis-[calc(20%-4rem)] space-y-4">
               <SkillBlock
-                title="Tools & Devops"
+                title={t("skills_section.skills_list.tools_devops_title")}
                 skills={[
                   "Git",
                   "Git Flow",
@@ -183,14 +191,16 @@ export default function HomePage() {
                 startsWithBold={false}
               />
               <SkillBlock
-                title="Databases"
+                title={t("skills_section.skills_list.databases_title")}
                 skills={["Firebase"]}
                 skillDescription="Firestore, Realtime Database"
               />
             </div>
             <div className="flex flex-col flex-1 basis-full md:basis-[calc(25%-4rem)] lg:basis-[calc(20%-4rem)] space-y-4">
               <SkillBlock
-                title="Architecture & Best Practices"
+                title={t(
+                  "skills_section.skills_list.arch_best_practices_title"
+                )}
                 skills={[
                   "Clean Architecture",
                   "MVVM",
@@ -202,7 +212,7 @@ export default function HomePage() {
             </div>
             <div className="flex flex-col flex-1 basis-full md:basis-[calc(25%-4rem)] lg:basis-[calc(20%-4rem)] space-y-4">
               <SkillBlock
-                title="Other Skills"
+                title={t("skills_section.skills_list.other_skills_title")}
                 skills={[
                   "REST API GraphQL",
                   "HTML5",
@@ -213,7 +223,7 @@ export default function HomePage() {
                 ]}
               />
               <SkillBlock
-                title="Testings"
+                title={t("skills_section.skills_list.testings_title")}
                 skills={["Jest Provider", "BLoC", "Jasmine"]}
               />
             </div>
@@ -226,7 +236,8 @@ export default function HomePage() {
           <div className="section-block__header">
             <div className="flex flex-row justify-start items-center">
               <h2>
-                <span>#</span>about-me
+                <span>#</span>
+                {t("about_section.title")}
               </h2>
               <div className="hidden md:block lg:block section-block__header__line"></div>
             </div>
@@ -234,7 +245,8 @@ export default function HomePage() {
 
           <div className="section-block__content justify-between">
             <div className="w-full flex-col md:w-1/2 lg:w-1/2">
-              <p>
+              <CustomMarkdown>{t("about_section.text")}</CustomMarkdown>
+              {/* <p>
                 <strong>Who am I?</strong>
               </p>
 
@@ -259,10 +271,13 @@ export default function HomePage() {
                 Currently, I’m expanding my expertise in{" "}
                 <strong>Next.js</strong> and <strong>React Native</strong>.{" "}
                 <strong>Let’s build something amazing together</strong>!
-              </p>
+              </p> */}
 
               <div className="mt-8">
-                <Button path="/about-me" text="Read more ->" />
+                <Button
+                  path="/about-me"
+                  text={`${t("about_section.button_text")} ->`}
+                />
               </div>
             </div>
             <div className="hidden md:flex w-full md:w-1/2 lg:w-1/2 justify-end">
@@ -282,31 +297,21 @@ export default function HomePage() {
           <div className="section-block__header">
             <div className="flex flex-row justify-start items-center">
               <h2>
-                <span>#</span>contacts
+                <span>#</span>
+                {t("contacts_section.title")}
               </h2>
               <div className="hidden md:block section-block__header__line"></div>
             </div>
           </div>
 
           <div className="section-block__content justify-between">
-            <div className="flex w-full md:w-1/2 lg:w-1/2">
-              <p>
-                If you&apos;re seeking an{" "}
-                <strong>experienced software developer</strong>, I&apos;d love
-                to connect and discuss how I can{" "}
-                <strong>contribute to your team</strong>. With expertise in
-                <strong>front-end development</strong>,{" "}
-                <strong>modern web frameworks</strong>, and{" "}
-                <strong>mobile app development</strong>, I&apos;m confident in
-                delivering <strong>scalable</strong>,{" "}
-                <strong>high-quality solutions</strong>. <br />
-                Let’s connect and explore opportunities to work together!
-              </p>
+            <div className="flex flex-col w-full md:w-1/2 lg:w-1/2">
+              <CustomMarkdown>{t("contacts_section.text")}</CustomMarkdown>
             </div>
             <div className="flex items-center justify-end w-full md:w-1/2 lg:w-1/2 ">
               <div className="text-frame text-frame--medium-pad flex-shrink-0 flex flex-col items-start justify-start">
                 <p>
-                  <strong>Message me here</strong>
+                  <strong>{t("contacts_section.message_me")}</strong>
                 </p>
 
                 <div className="flex flex-row mt-4">
@@ -336,7 +341,7 @@ export default function HomePage() {
                         width={32}
                         height={32}
                       />
-                    <span className="ml-2">+55 (11) 93619-0701</span>
+                      <span className="ml-2">+55 (11) 93619-0701</span>
                     </Link>
                   </div>
                 </div>

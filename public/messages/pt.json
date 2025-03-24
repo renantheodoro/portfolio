@@ -1,0 +1,66 @@
+{
+  "language": {
+    "current_language": "PT-BR"
+  },
+  "header_menu": {
+    "links": {
+      "home": "início",
+      "about_me": "sobre-mim",
+      "experiences": "experiências",
+      "works": "trabalhos",
+      "contacts": "contatos"
+    }
+  },
+  "home_page": {
+    "main_section": {
+      "title": "## Renan é um desenvolvedor **front-end** e **mobile**",
+      "text": "Ele constrói soluções escaláveis e eficientes utilizando tecnologias modernas.",
+      "button_text": "ENTRE EM CONTATO",
+      "current_job_info": "Atualmente trabalhando no **Santander**"
+    },
+    "quote_section": {
+      "quote": "A única maneira de ir rápido é ir bem.",
+      "author": "- Robin C. Martin"
+    },
+    "projects_section": {
+      "title": "projetos",
+      "view_all": "Ver todos"
+    },
+    "skills_section": {
+      "title": "habilidades",
+      "skills_list": {
+        "languages_title": "Linguagens",
+        "frameworks_title": "Frameworks & Bibliotecas",
+        "tools_devops_title": "Ferramentas & DevOps",
+        "databases_title": "Bancos de Dados",
+        "arch_best_practices_title": "Arquitetura & Melhores Práticas",
+        "other_skills_title": "Outras Habilidades",
+        "testings_title": "Testes"
+      }
+    },
+    "about_section": {
+      "title": "sobre-mim",
+      "text": "**Quem sou eu?**\n\nOlá, eu sou Renan Theodoro!\n\nSou um Desenvolvedor de Software Sênior com **mais de 10 anos de experiência** no desenvolvimento de aplicativos **web e mobile**, especializando-me em frameworks como **Flutter, React, Angular** e **Vue.js**, com foco em **desempenho**, **escalabilidade** e **arquitetura de software limpa**.\n\nSou apaixonado por **Clean Code**, **princípios SOLID** e pela criação de soluções **manuteníveis** e de **alta qualidade**.\n\nMinhas habilidades se estendem para **integração de APIs**, **gerenciamento de estado** e **desenvolvimento full-stack** com tecnologias como **Node.js, Firebase** e **PHP**.\n\nAtualmente, estou expandindo minha experiência em **Next.js** e **React Native**.\n\n**Vamos construir algo incrível juntos!**",
+      "button_text": "Leia mais"
+    },
+    "contacts_section": {
+      "title": "contatos",
+      "text": "Se você está procurando um **desenvolvedor de software experiente**, adoraria conectar e discutir como posso **contribuir para sua equipe**. Com expertise em **desenvolvimento front-end**, **frameworks modernos para web** e **desenvolvimento de aplicativos mobile**, estou confiante em entregar soluções **escaláveis** e de **alta qualidade**.\n\n**Vamos nos conectar e explorar oportunidades para trabalharmos juntos!**",
+      "message_me": "Entre em contato aqui"
+    }
+  },
+  "about_me_page": {
+    "title": "sobre-mim",
+    "content": "**Quem sou eu?**\n\nCom mais de **10 anos de experiência** em desenvolvimento de software, me especializo em aplicações web e móveis utilizando **Flutter, React, Angular** e **Vue.js**. Meu foco é em **performance**, **escalabilidade** e **arquitetura limpa**, entregando **experiências de alta qualidade** e **fáceis de usar**.\n\nSou apaixonado por **Clean Code**, **princípios SOLID** e garantir que meu código seja **manutenível** e **escalável**. Também tenho experiência com tecnologias de backend como **Node.js**, **Firebase** e **PHP**, permitindo-me criar **soluções full-stack**. Atualmente, estou expandindo meu conhecimento em **Next.js** e **React Native** para aprimorar ainda mais as aplicações que crio.\n\n**Vamos criar algo incrível juntos!**",
+    "fun_facts_section": {
+      "title": "fatos-sobre-mim",
+      "fun_fact_1": "Eu **toco guitarra** no meu tempo livre",
+      "fun_fact_2": "Sou um grande fã de **café**",
+      "fun_fact_3": "Eu amo **churrasco**!",
+      "fun_fact_4": "Eu sei como resolver um **cubo mágico**",
+      "fun_fact_5": "Meu jogo favorito é **The Last of Us**",
+      "fun_fact_6": "Eu tenho duas **gatinhas** adoráveis",
+      "fun_fact_7": "Acredito no poder da **simplicidade**, por isso o **minimalismo** me influencia."
+    }
+  }
+}

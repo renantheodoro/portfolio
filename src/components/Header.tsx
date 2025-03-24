@@ -1,13 +1,35 @@
 "use client";
 
+import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
+import { useRouter, usePathname } from "next/navigation";
 import styles from "@/styles/components/Header.module.scss";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 
-export default function Header() {
+export async function getServerSideProps({ locale }: { locale: string }) {
+  const initialLanguage = locale || "EN";
+
+  return {
+    props: {
+      initialLanguage,
+    },
+  };
+}
+
+export default function Header({
+  initialLanguage,
+}: {
+  initialLanguage: string;
+}) {
+  const t = useTranslations("header_menu");
+  const language = useTranslations("language");
+
   const [languageMenuActive, setLanguageMenuActive] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState("EN");
+  const [selectedLanguage, setSelectedLanguage] =
+    useState<string>(initialLanguage);
+  const router = useRouter();
+  const pathname = usePathname();
 
   const toggleLanguageMenu = () => {
     setLanguageMenuActive((prev) => !prev);
@@ -16,7 +38,22 @@ export default function Header() {
   const changeLanguage = (lang: string) => {
     setSelectedLanguage(lang);
     setLanguageMenuActive(false);
+
+    // Pega o caminho atual da URL
+    const currentPath = pathname;
+
+    const languagePrefix = lang === "EN" ? "/en" : "/pt";
+
+    if (currentPath.startsWith("/en") || currentPath.startsWith("/pt")) {
+      router.push(`${languagePrefix}${currentPath.replace(/^\/(en|pt)/, "")}`);
+    } else {
+      router.push(`${languagePrefix}${currentPath}`);
+    }
   };
+
+  useEffect(() => {
+    setSelectedLanguage(language("current_language"));
+  }, [language]);
 
   return (
     <header className={styles.header}>
@@ -37,27 +74,32 @@ export default function Header() {
           <ul>
             <li className={styles["header__menu__item"]}>
               <Link href="/" passHref>
-                <span>#</span>home
+                <span>#</span>
+                {t("links.home")}
               </Link>
             </li>
             <li className={styles["header__menu__item"]}>
               <Link href="/about-me" passHref>
-                <span>#</span>about-me
+                <span>#</span>
+                {t("links.about_me")}
               </Link>
             </li>
             <li className={styles["header__menu__item"]}>
               <Link href="/experiences" passHref>
-                <span>#</span>experiences
+                <span>#</span>
+                {t("links.experiences")}
               </Link>
             </li>
             <li className={styles["header__menu__item"]}>
               <Link href="/works" passHref>
-                <span>#</span>works
+                <span>#</span>
+                {t("links.works")}
               </Link>
             </li>
             <li className={styles["header__menu__item"]}>
               <Link href="/contacts" passHref>
-                <span>#</span>contacts
+                <span>#</span>
+                {t("links.contacts")}
               </Link>
             </li>
             <li>
