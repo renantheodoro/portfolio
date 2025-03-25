@@ -10,7 +10,7 @@ interface ButtonProps {
   onClick?: () => void;
 }
 
-export default function Button({ path, text, type, onClick }: ButtonProps) {
+export default function ButtonLink({ path, text, type, onClick }: ButtonProps) {
   const handleClick = () => {
     if (onClick) {
       onClick();
@@ -21,6 +21,7 @@ export default function Button({ path, text, type, onClick }: ButtonProps) {
     <div onClick={handleClick}>
       <Link
         href={path}
+        target="_blank"
         className={`${style.button} ${style[`button--${type ?? "primary"}`]}`}
       >
         {text}

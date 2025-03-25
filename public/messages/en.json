@@ -118,10 +118,66 @@
     "title": "projects",
     "subtitle": "List of my projects",
     "complete_apps_section": {
-      "title": "complete-apps"
+      "title": "complete-apps",
+      "projects_list": {
+        "project1": {
+          "title": "### Renan Theodoro | My Portfolio",
+          "description": "Portfolio developed in Next.js with MVVM architecture and i18n support."
+        },
+        "project2": {
+          "title": "### URL Shortener | Flutter App",
+          "description": "A Flutter app that allows users to shorten URLs easily. It communicates with a backend API to generate shortened links and provides a user-friendly interface for managing and copying those links."
+        },
+        "project3": {
+          "title": "### PJZen Website",
+          "description": "Creation of a modern and responsive website for PJZen to ensure intuitive navigation and good performance across various devices."
+        },
+        "project4": {
+          "title": "### Sua Sede",
+          "description": "**Sua Sede** is a business platform offering Virtual Office, Meeting Rooms, and Digital Accounting, with responsive design and easy navigation."
+        },
+        "project5": {
+          "title": "### PJZen Platform",
+          "description": "**PJZen Platform** is a complete solution for automating invoice issuance, with user authentication, management, and automatic invoice duplication, streamlining accounting management."
+        },
+        "project6": {
+          "title": "### Indfer",
+          "description": "Institutional website for Indfer, developed with Vue.js and integrated with Prismic CMS and GraphQL."
+        },
+        "project7": {
+          "title": "### Incipit",
+          "description": "Institutional website developed with Vue.js, integrated with Prismic CMS and GraphQL."
+        },
+        "project8": {
+          "title": "### Old Portfolio",
+          "description": "My old portfolio website created in 2017."
+        }
+      }
     },
     "small_projects_section": {
-      "title": "small-projects"
+      "title": "Small Projects",
+      "projects_list": {
+        "project1": {
+          "title": "### Corona Virus Brazil",
+          "description": "Project developed to provide accurate information about confirmed COVID-19 cases in Brazil, aimed at contributing to the dissemination of correct and up-to-date data."
+        },
+        "project2": {
+          "title": "### Leaflet Map Mock",
+          "description": "A mock project to test map interaction for the meuDNA project."
+        },
+        "project3": {
+          "title": "### Map List Navigator",
+          "description": "A mock project to test map interaction for the meuDNA project in Flutter."
+        },
+        "project4": {
+          "title": "### URL Shortener API",
+          "description": "A backend API built using Node.js, Express, and Firebase Functions to shorten URLs. It stores original URLs and generates unique shortened versions. The API is designed to be scalable and secure, with a focus on performance and ease of use."
+        },
+        "project5": {
+          "title": "### Multi Talentos",
+          "description": "My graduation project, built with Angular version 1.4.4 in 2016."
+        }
+      }
     }
   },
   "contacts_page": {
@@ -129,7 +185,7 @@
     "content": "\n\n**Who am I?** \n\nIf you’re seeking an **experienced software developer**, I’d love to connect and discuss how I can **contribute to your team**. With expertise in **front-end development**, **modern web frameworks**, and **mobile app development**, I’m confident in delivering **scalable**, **high-quality solutions**.  \n\n**Let’s connect and explore opportunities to work together!**",
     "message_me": "Message me here",
     "all_media_section": {
-        "title": "all-media"
+      "title": "all-media"
     }
   }
 }

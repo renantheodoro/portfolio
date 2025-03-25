@@ -22,6 +22,22 @@
     width: 100%;
     overflow: hidden;
 
+    position: relative;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      background-color: var(--background);
+
+      opacity: 0.2;
+    }
+
     img {
       width: 100%;
       height: 100%;
@@ -31,16 +47,15 @@
   }
 
   &__techs {
-    border: {
-      top: 1px solid var(--grey);
-      bottom: 1px solid var(--grey);
-    }
-
     max-width: 100%;
     display: flex;
     flex-wrap: wrap;
-    gap: 0.2rem 1rem;
-    padding: 0.4rem 1rem;
+    gap: 0.5rem;
+    padding: 0.4rem 0;
+
+    p {
+      margin-bottom: 0;
+    }
   }
 
   &__content {
@@ -64,6 +79,8 @@
       align-items: center;
       justify-content: start;
       gap: 1rem;
+
+      margin-top: 2rem;
     }
   }
 }

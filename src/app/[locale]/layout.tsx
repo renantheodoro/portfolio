@@ -41,14 +41,14 @@ export const metadata = {
   },
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
   params,
 }: Readonly<{
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
+  params: { locale: string }; // Ajuste aqui para não ser Promise
 }>) {
-  const { locale } = await params;
+  const { locale } = params;
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
@@ -77,15 +77,13 @@ export default async function RootLayout({
           content={metadata.twitter.description}
         />
         <meta name="twitter:image" content={metadata.twitter.image} />
-
-        {/* Add any other SEO-related meta tags here */}
       </head>
 
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <NextIntlClientProvider>
-          <Header />
+          <Header initialLanguage={locale} />
           <main>{children}</main>
           <Footer />
         </NextIntlClientProvider>

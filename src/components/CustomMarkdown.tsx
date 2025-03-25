@@ -9,7 +9,7 @@ interface CustomMarkdownProps {
 }
 
 const CustomMarkdown: React.FC<CustomMarkdownProps> = ({
-  tag,
+  tag = "p",
   customClass,
   children,
 }) => {
@@ -17,8 +17,8 @@ const CustomMarkdown: React.FC<CustomMarkdownProps> = ({
     <Markdown
       remarkPlugins={[remarkGfm]}
       components={{
-        [tag ?? "p"]: ({ ...props }) =>
-          React.createElement(tag ?? "p", {
+        [tag]: ({ ...props }) =>
+          React.createElement(tag, {
             className: customClass ?? "",
             ...props,
           }),

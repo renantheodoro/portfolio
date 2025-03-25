@@ -118,10 +118,66 @@
     "title": "projetos",
     "subtitle": "Lista dos meus projetos",
     "complete_apps_section": {
-      "title": "apps-completos"
+      "title": "complete-apps",
+      "projects_list": {
+        "project1": {
+          "title": "### Renan Theodoro | Meu Portfólio",
+          "description": "Portfólio desenvolvido em Next.js com arquitetura MVVM e suporte a i18n."
+        },
+        "project2": {
+          "title": "### URL Shortener | Flutter App",
+          "description": "A Flutter app that allows users to shorten URLs easily. It communicates with a backend API to generate shortened links and provides a user-friendly interface for managing and copying those links."
+        },
+        "project3": {
+          "title": "### PJZen Website",
+          "description": "Criação de um site responsivo e moderno para a PJZen para garantir uma navegação intuitiva e bom desempenho em dispositivos diversos."
+        },
+        "project4": {
+          "title": "### Sua Sede",
+          "description": "**Sua Sede** é uma plataforma empresarial que oferece Escritório Virtual, Salas de Reunião e Contabilidade Digital, com design responsivo e fácil navegação."
+        },
+        "project5": {
+          "title": "### PJZen Platform",
+          "description": "**PJZen Platform** é uma solução completa para automação da emissão de notas fiscais, com autenticação de usuário, administração e duplicação automática de notas, facilitando o gerenciamento contábil."
+        },
+        "project6": {
+          "title": "### Indfer",
+          "description": "Site institucional para a Indfer, desenvolvido com Vue.js e integrado ao Prismic CMS e GraphQL."
+        },
+        "project7": {
+          "title": "### Incipit",
+          "description": "Website institucional desenvolvido com Vue.js, integrado ao Prismic CMS e GraphQL."
+        },
+        "project8": {
+          "title": "### Antigo Portifólio",
+          "description": "Meu antigo website de portfólio criado em 2017."
+        }
+      }
     },
     "small_projects_section": {
-      "title": "projetos-menores"
+      "title": "small-projects",
+      "projects_list": {
+        "project1": {
+          "title": "### Corona Virus Brazil",
+          "description": "Projeto desenvolvido para fornecer informações precisas sobre os casos confirmados de COVID-19 no Brasil, com o objetivo de contribuir para a disseminação de dados corretos e atualizados."
+        },
+        "project2": {
+          "title": "### Leaflet Map Mock",
+          "description": "Um projeto mock para teste de interação com mapa para o projeto meuDNA"
+        },
+        "project3": {
+          "title": "### Map List Navigator",
+          "description": "Um projeto mock para teste de interação com mapa para o projeto meuDNA em Flutter"
+        },
+        "project4": {
+          "title": "### URL Shortener API",
+          "description": "A backend API built using Node.js, Express, and Firebase Functions to shorten URLs. It stores original URLs and generates unique shortened versions. The API is designed to be scalable and secure, with a focus on performance and ease of use."
+        },
+        "project5": {
+          "title": "### Multi Talentos",
+          "description": "Projeto do meu TCC feito em Angular na versão 1.4.4 em 2016"
+        }
+      }
     }
   },
   "contacts_page": {

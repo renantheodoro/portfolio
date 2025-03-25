@@ -2,6 +2,7 @@
 
 import style from "@/styles/components/ProjectItem.module.scss";
 import Image from "next/image";
+import CustomMarkdown from "./CustomMarkdown";
 
 interface ProjectItemProps {
   mediaPath?: string;
@@ -12,7 +13,11 @@ interface ProjectItemProps {
 }
 
 function buildTechs(techs: Array<string>) {
-  return techs.map((tech, index) => <p key={index}>{tech}</p>);
+  return techs.map((tech, index) => (
+    <div key={index} className="text-frame">
+      <p>{tech}</p>
+    </div>
+  ));
 }
 
 export default function ProjectItem({
@@ -34,13 +39,15 @@ export default function ProjectItem({
           />
         </div>
       ) : null}
-      <div className={`${style["project-item__techs"]}`}>
-        {buildTechs(techs)}
-      </div>
+
       <div className={`${style["project-item__content"]}`}>
         <div>
-          <h3>{title}</h3>
-          <p>{description}</p>
+          <CustomMarkdown tag="h3">{title}</CustomMarkdown>
+          <CustomMarkdown tag="p">{description}</CustomMarkdown>
+
+          <div className={`${style["project-item__techs"]}`}>
+            {buildTechs(techs)}
+          </div>
         </div>
 
         <div className={`${style["project-item__content__bottom"]}`}>
