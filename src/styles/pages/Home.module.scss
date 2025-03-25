@@ -1,0 +1,52 @@
+.main-section {
+  padding-bottom: var(--section-padding);
+
+  &__title,
+  &__text {
+    margin-bottom: 2rem;
+  }
+}
+
+.quote-section {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+
+  &__sentence {
+    display: block;
+    border: 1px solid var(--grey);
+
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+
+      position: absolute;
+      width: 42px;
+      height: 28px;
+
+      background-image: url("../../../public/svg/quote.svg");
+    }
+
+    &--bigger {
+      padding: 2rem;
+      font-weight: 600;
+
+      &::after {
+        top: -1rem;
+        left: 1rem;
+      }
+    }
+
+    &--smaller {
+      padding: 0.8rem;
+      font-weight: 400;
+      border-top: 0;
+
+      &::after {
+        top: -1rem;
+        right: 1rem;
+      }
+    }
+  }
+}

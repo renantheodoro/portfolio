@@ -1,0 +1,18 @@
+.button {
+  display: inline-flex;
+
+  padding: .5rem 1rem;
+  border: 1px solid;
+
+  font-weight: bold;
+
+  &--primary {
+    color: var(--white);
+    border-color: var(--primary);
+  }
+
+  &--secondary {
+    color: var(--grey);
+    border-color: var(--grey);
+  }
+}

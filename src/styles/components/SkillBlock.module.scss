@@ -1,0 +1,32 @@
+@import "@/styles/_functions.scss";
+
+.skill-block {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--grey);
+
+  strong {
+    color: var(--white);
+  }
+
+  &__header {
+    border-bottom: 1px solid var(--grey);
+    padding: 0.5rem;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+  &__content {
+    padding: 0.5rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+
+    small {
+      font-size: 0.8rem;
+      font-weight: 400;
+    }
+  }
+}

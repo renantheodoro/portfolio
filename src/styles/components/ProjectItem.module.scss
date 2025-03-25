@@ -1,0 +1,86 @@
+@import "@/styles/_functions.scss";
+
+.project-item {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+
+  border: 1px solid var(--grey);
+
+  @media screen and (min-width: breakpoint("tablet")) {
+    flex-basis: calc(33% - 1rem);
+  }
+
+  &:hover &__media img {
+    transform: scale(1.1);
+  }
+
+  &__media {
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+
+    position: relative;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      background-color: var(--background);
+
+      opacity: 0.2;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+  }
+
+  &__techs {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.4rem 0;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  &__content {
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+
+    h3 {
+      margin-bottom: 0.4rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    &__bottom {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      gap: 1rem;
+
+      margin-top: 2rem;
+    }
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "language": {
+    "current_language": "PT-BR"
+  },
+  "header_menu": {
+    "links": {
+      "home": "home",
+      "about_me": "sobre-mim",
+      "experiences": "experiências",
+      "works": "projetos",
+      "contacts": "contato"
+    }
+  },
+  "home_page": {
+    "main_section": {
+      "title": "## Renan é um desenvolvedor **front-end** e **mobile**",
+      "text": "Ele constrói soluções escaláveis e eficientes utilizando tecnologias modernas.",
+      "button_text": "ENTRE EM CONTATO",
+      "current_job_info": "Atualmente trabalhando no **Santander**"
+    },
+    "quote_section": {
+      "quote": "A única maneira de ir rápido é ir bem.",
+      "author": "- Robin C. Martin"
+    },
+    "projects_section": {
+      "title": "projetos",
+      "view_all": "Ver todos"
+    },
+    "skills_section": {
+      "title": "habilidades",
+      "skills_list": {
+        "languages_title": "Linguagens",
+        "frameworks_title": "Frameworks & Bibliotecas",
+        "tools_devops_title": "Ferramentas & DevOps",
+        "databases_title": "Bancos de Dados",
+        "arch_best_practices_title": "Arquitetura & Melhores Práticas",
+        "other_skills_title": "Outras Habilidades",
+        "testings_title": "Testes"
+      }
+    },
+    "about_section": {
+      "title": "sobre-mim",
+      "text": "**Quem sou eu?**\n\nOlá, eu sou Renan Theodoro!\n\nSou um Desenvolvedor de Software Sênior com **mais de 10 anos de experiência** no desenvolvimento de aplicativos **web e mobile**, especializando-me em frameworks como **Flutter, React, Angular** e **Vue.js**, com foco em **desempenho**, **escalabilidade** e **arquitetura de software limpa**.\n\nSou apaixonado por **Clean Code**, **princípios SOLID** e pela criação de soluções **manuteníveis** e de **alta qualidade**.\n\nMinhas habilidades se estendem para **integração de APIs**, **gerenciamento de estado** e **desenvolvimento full-stack** com tecnologias como **Node.js, Firebase** e **PHP**.\n\nAtualmente, estou expandindo minha experiência em **Next.js** e **React Native**.\n\n**Vamos construir algo incrível juntos!**",
+      "button_text": "Leia mais"
+    },
+    "contacts_section": {
+      "title": "contatos",
+      "text": "Se você está procurando um **desenvolvedor de software experiente**, adoraria conectar e discutir como posso **contribuir para sua equipe**. Com expertise em **desenvolvimento front-end**, **frameworks modernos para web** e **desenvolvimento de aplicativos mobile**, estou confiante em entregar soluções **escaláveis** e de **alta qualidade**.\n\n**Vamos nos conectar e explorar oportunidades para trabalharmos juntos!**",
+      "message_me": "Entre em contato aqui"
+    }
+  },
+  "about_me_page": {
+    "title": "sobre-mim",
+    "content": "**Quem sou eu?**\n\nCom mais de **10 anos de experiência** em desenvolvimento de software, me especializo em aplicações web e móveis utilizando **Flutter, React, Angular** e **Vue.js**. Meu foco é em **performance**, **escalabilidade** e **arquitetura limpa**, entregando **experiências de alta qualidade** e **fáceis de usar**.\n\nSou apaixonado por **Clean Code**, **princípios SOLID** e garantir que meu código seja **manutenível** e **escalável**. Também tenho experiência com tecnologias de backend como **Node.js**, **Firebase** e **PHP**, permitindo-me criar **soluções full-stack**. Atualmente, estou expandindo meu conhecimento em **Next.js** e **React Native** para aprimorar ainda mais as aplicações que crio.\n\n**Vamos criar algo incrível juntos!**",
+    "fun_facts_section": {
+      "title": "fatos-sobre-mim",
+      "fun_fact_1": "Eu **toco guitarra** no meu tempo livre",
+      "fun_fact_2": "Sou um grande fã de **café**",
+      "fun_fact_3": "Eu amo **churrasco**!",
+      "fun_fact_4": "Eu sei como resolver um **cubo mágico**",
+      "fun_fact_5": "Meu jogo favorito é **The Last of Us**",
+      "fun_fact_6": "Eu tenho duas **gatinhas** adoráveis",
+      "fun_fact_7": "Acredito no poder da **simplicidade**, por isso o **minimalismo** me influencia."
+    }
+  },
+  "experiences_page": {
+    "title": "experiências profissionais",
+    "summary": {
+      "title": "🚀 Desenvolvedor Frontend & Mobile Sênior",
+      "text": "**Especialista em Web & Mobile** com **mais de 10 anos de experiência** em **Flutter**, **React**, **Angular** e **Vue.js**. Apaixonado por **Clean Code**, **SOLID** e **arquitetura escalável**. Habilidade em **REST/GraphQL**, **gerenciamento de estado** e **testes**. Expansão de conhecimento em **Next.js** e **React Native**. \n\n **Vamos construir algo incrível! 🚀**"
+    },
+    "experiences_list": {
+      "company1": {
+        "name": "#Santander",
+        "role": "Desenvolvedor de Software Sênior",
+        "duration": "(julho de 2022 - atualmente)",
+        "description": "Fui convidado para integrar a equipe devido à minha experiência em **Flutter** e **Clean Architecture**. Inicialmente, fui responsável por estabelecer a arquitetura de um projeto focado em soluções de empréstimos simples, incluindo **crédito pessoal**, **empréstimos com garantia de carro**, **refinanciamento de veículos** e **parcerias de crédito** para o cliente final. Com o tempo, comecei a contribuir para outros projetos, aplicando minhas habilidades em diferentes frameworks. \n\n**Minhas Conquistas e Impacto:** \n\n• **Desenvolvimento e Recriação de Projetos com Flutter:** Trabalhei em todas as etapas do desenvolvimento de aplicativos Flutter, incluindo criação, **testes unitários** com **BLoC** e **Provider**, e publicação nas lojas (**Google Play** e **App Store**). Também recriei um projeto originalmente desenvolvido com Vue.js para Flutter, aplicando **Clean Architecture**, **MVVM** e **Flutter Web**, criando soluções multiplataforma para **Android**, **iOS** e **Web**. \n\n• **Arquiteturas Multiplataforma com Clean Architecture e MVVM:** Desenvolvi arquiteturas para projetos em **Flutter**, **Next.js** e **React Native**, sempre aplicando **Clean Architecture** e **MVVM**, seguindo as melhores práticas de codificação e documentação. \n\n• **Referência Técnica e Workshops:** Fui considerado uma referência técnica em **Flutter** e **Clean Architecture**, liderando workshops internos sobre **Flutter**, **Clean Code** e melhores práticas de desenvolvimento. \n\n• **Cultura de Desenvolvimento:** Contribuí para a construção de uma forte cultura de desenvolvimento, implementando um eficiente **Git Flow**, adotado por mais de **3 equipes**, além de estabelecer práticas de **Code Review** e padronizar a documentação utilizando **Azure**. \n\n• **Projeto Atual em Angular 15:** Fui convidado para implementar soluções de empréstimos (**crédito pessoal**, **garantia de carro**, **refinanciamento de veículos** e **parcerias de crédito**) em um novo projeto desenvolvido com **Angular 15**. \n\nMinha abordagem, focada em **melhores práticas** e **soluções eficazes**, fez de mim uma **referência técnica**, sendo reconhecido por impactar positivamente a **produtividade** e a **qualidade** dos projetos.",
+        "techs": "Flutter, React.js, Angular, Vue.js, React Native, TypeScript, JavaScript (ECMAScript), Clean Architecture, Clean Code, MVVM (Model-View-ViewModel), API REST, GraphQL, JWT (JSON Web Token), GitFlow, Webpack, React Hooks, Vuex, Figma, SASS, CSS, i18n, Testes Unitários, HTML5, Apache Cordova, Dart"
+      },
+      "company2": {
+        "name": "#Mendelics (meuDNA)",
+        "role": "Desenvolvedor de Software Sênior",
+        "duration": "(setembro de 2018 - junho de 2022)",
+        "description": "Fui contratado como o primeiro desenvolvedor para o projeto **meuDNA**, criado pelo maior laboratório de testes genéticos da América Latina, **Mendelics**. O projeto tinha como objetivo levar produtos genéticos ao público geral, como **testes de ancestralidade, testes de predisposição a doenças genéticas, perfil genético** e o **Teste Bochechinha**, que identifica doenças hereditárias a partir do DNA do bebê.\n\n**Minhas Conquistas e Impacto:**\n\n• **Desenvolvimento do MVP:** Entreguei a primeira versão do teste de ancestralidade em **2 meses**, permitindo que o projeto iniciasse **um mês antes do planejado**, criando um impacto financeiro positivo.\n\n• **Estabelecimento de Melhores Práticas em Angular:** Implementei boas práticas como **BEM com SCSS**, e configurei **documentação** e **testes unitários com Jasmine**, criando a base para o crescimento da equipe.\n\n• **Abertura para o Mobile com Flutter:** Participei como o **primeiro desenvolvedor** na versão mobile, ajudando a estabelecer uma cultura de **Clean Code, Code Review** e **CI/CD com GitHub Actions**.\n\n• **Referência Técnica em Flutter e Clean Architecture:** Tornei-me uma **referência técnica**, auxiliando a equipe no aprendizado de **Flutter** e **Clean Architecture**, e contribuindo para a documentação no **Notion**.\n\n• **Contribuições para o Backend com Node.js e NestJS:** Ajudei a desenvolver e manter APIs utilizando **Node.js** e **NestJS** com **Clean Architecture**. Também trabalhei com **Firebase**, utilizando **Functions, Firestore, Analytics** e alguns serviços do **GCP**.\n\n• **Design System e Projeto Escalável:** Desenvolvi um **design system escalável**, alinhado com as necessidades do projeto, garantindo eficiência para a equipe.\n\n• **Mapeamento de Ancestralidade com Flutter:** Desenvolvi uma **função interativa** com um mapa real, visualizando a distribuição genética, elogiada pelos usuários. Construi uma ferramenta para coletar **dados de latitude e longitude**, essenciais para o posicionamento correto.\n\nMinha experiência no **meuDNA** foi definida por **entregas rápidas, melhores práticas de desenvolvimento** e **impacto financeiro positivo**. Fui reconhecido como uma **referência técnica** em **Flutter, Clean Architecture, Node.js, NestJS** e **Firebase**.",
+        "techs": "Google Cloud Platform (GCP), Clean Architecture, ECMAScript, Flutter, Webpack, GitFlow, Teste de Unidade, Figma, CSS, Internacionalização, Angular 8, Node.js, Angular (Framework), HTML, Firebase, NestJS, Dart, Clean Code"
+      },
+      "company3": {
+        "name": "#Voxel Digital",
+        "role": "Desenvolvedor Frontend Pleno",
+        "duration": "(setembro de 2018 - setembro de 2019)",
+        "description": "Fui contratado como desenvolvedor front-end pleno na **Voxel Digital**, onde contribuí para o desenvolvimento de vários produtos web e soluções móveis para grandes clientes, como Banco Itaú, Banco Bradesco, Banpará e Estácio. Fui convidado pelo líder do projeto, que já conhecia meu trabalho anterior e queria que eu me juntasse à equipe para desenvolver soluções digitais para comunicação interna. \n\n**Minhas Conquistas e Impacto:** \n\n• **Aprendizado Rápido e Entregas Ágeis:** Em apenas 1 semana, aprendi Vue.js e entreguei o MVP de um dos maiores projetos da empresa. Essa entrega inicial impressionou a equipe e abriu portas para que eu trabalhasse em outros projetos. \n\n• **Projeto Híbrido Mobile com Vue.js e Cordova:** Trabalhei em um projeto híbrido mobile para o Banco Bradesco, construindo um sistema de chat integrado entre as versões web e mobile do aplicativo. A solução suportava transmissões ao vivo de líderes do banco, com chat interativo disponível em tablets nas agências bancárias e em dispositivos móveis para funcionários. A integração das mensagens utilizava a mesma lógica de backend para ambas as plataformas. \n\n• **Melhores Práticas e Confiabilidade:** Fui constantemente elogiado pela minha entrega rápida e trabalho confiável, o que gerou economia para a empresa, pois consegui lidar com múltiplas demandas de front-end sem a necessidade de desenvolvedores adicionais. \n\n• **Tecnologias Utilizadas:** Trabalhei com HTML5, JavaScript (ES6), Vue.js, Cordova, Ionic e também trabalhei com recursos nativos de Swift utilizando o Xcode para ajustes na versão iOS. \n\n**Impacto:** Minha capacidade de aprender rapidamente novas tecnologias e entregar soluções eficientes me fez um membro chave da equipe, garantindo uma comunicação sem falhas entre as versões web e mobile. Isso contribuiu para o sucesso dos projetos e a satisfação dos clientes.",
+        "techs": "Vuex, SASS, Cordova, ECMAScript, Vue.js, Webpack, GitFlow, Figma, CSS, Angular (Framework), HTML, Ionic Framework, HTML5, Apache Cordova"
+      },
+      "company4": {
+        "name": "#SeePix Comunicação e Tecnologia",
+        "role": "Desenvolvedor Frontend Júnior",
+        "duration": "(março de 2017 - agosto de 2018)",
+        "description": "Fui contratado para desenvolver soluções de comunicação interna para grandes empresas como Carrefour, Bauducco, Swift Carnes, Avianca, Catho, Heineken, Mercedes, Sodexo, Toyota, 3M, entre outras. Meu foco estava em criar sinalização digital e templates reutilizáveis para exibição em totens, tanto para funcionários quanto para clientes.  \n\n**Minhas Conquistas e Impacto:**  \n\n• **Adição do SASS ao Projeto:** Contribuí para a implementação do SASS, substituindo o uso exclusivo de CSS, o que trouxe maior eficiência e flexibilidade para o desenvolvimento. Fui amplamente elogiado por essa melhoria.  \n\n• **Desenvolvimento da Biblioteca de Estilos:** Identifiquei que muitos processos eram repetitivos e tomei a iniciativa de criar uma biblioteca de estilos personalizada para a empresa. Esse trabalho teve um impacto positivo ao automatizar e documentar tarefas recorrentes, acelerando significativamente o processo de desenvolvimento.  \n\n• **Impacto no Cliente:** As soluções desenvolvidas tiveram um impacto significativo no sucesso de campanhas internas e externas para grandes marcas, elevando a eficiência das comunicações.  \n\n**Tecnologias:** Trabalhei com **JavaScript**, **SASS**, **HTML5**, **CSS3** e diversas ferramentas de automação.  \n\n**Impacto:** Meu trabalho teve um grande impacto na eficiência e agilidade da equipe, sendo reconhecido pelos clientes pela excelência e pela inovação das soluções propostas.",
+        "techs": "JavaScript (ES6), SASS, Webpack, GitFlow, Figma, CSS, HTML5"
+      },
+      "company5": {
+        "name": "#Studio Monocromo",
+        "role": "Desenvolvedor Frontend Júnior",
+        "duration": "(fev de 2016 - fev de 2017)",
+        "description": "Comecei no Studio Monocromo trabalhando em formato de agência, onde éramos responsáveis pela produção de sites. Posteriormente, começamos a trabalhar em dois projetos de startup: Appboats e Escoladireta. Minha principal contribuição foi no desenvolvimento de sites institucionais e na criação de templates personalizados usando WordPress e PHP. Também trabalhei em campanhas de email marketing e outros projetos. \n\n**Minhas Conquistas e Impacto:** \n\n• **Uso de Bibliotecas CSS e JS:** Introduzi o uso de bibliotecas CSS e JS para otimizar o desenvolvimento, baseando o design dos projetos no Material Design do Google. Essa abordagem foi amplamente elogiada pela equipe, pois trouxe agilidade tanto no desenvolvimento quanto no design, tornando tudo mais padronizado. Utilizei extensivamente o Materialize para garantir que os projetos seguissem as melhores práticas de design. \n\n• **Desenvolvimento Híbrido com Cordova:** Tive minhas primeiras experiências com desenvolvimento híbrido, usando o Cordova para gerar versões móveis dos projetos. Essa experiência expandiu meu conhecimento em soluções móveis. \n\n• **Tecnologias Utilizadas:** Trabalhei com HTML5, CSS3, SASS, JavaScript, jQuery, Materialize, Bootstrap, WordPress e AngularJS, sempre buscando novas formas de agilizar processos e melhorar resultados. \n\n**Impacto:** No Studio Monocromo, minha experiência foi marcada pela inovação no uso de tecnologias que aceleraram o desenvolvimento, além de contribuir para a melhoria do design e padronização dos projetos.",
+        "techs": "JavaScript, SASS, Scrum, ECMAScript, CSS3, GitFlow, CSS, jQuery, HTML, HTML5, Git, GitHub, Apache Cordova, PHP"
+      },
+      "company6": {
+        "name": "#UpperID (Ao5)",
+        "role": "Desenvolvedor Frontend Júnior",
+        "duration": "(outubro de 2015 - fevereiro de 2016)",
+        "description": "Trabalhei na Upper ID, uma agência especializada na produção de sistemas, sites institucionais e email marketing. Minha principal responsabilidade era criar sites e blogs responsivos, sempre aplicando princípios modernos de UI/UX.\n\n**Minhas Conquistas e Impacto:**\n\n• **Desenvolvimento de Templates Personalizados:** Trabalhei com WordPress, HTML5, CSS3 e jQuery, criando templates personalizados para diversos projetos. Apliquei práticas como mobile-first, responsividade e pré-processadores como SASS e LESS para otimizar o desenvolvimento e garantir uma excelente experiência de usuário em dispositivos móveis.\n\n• **Uso do Photoshop:** Aprendi a trabalhar com o Photoshop para editar elementos visuais de acordo com os designs fornecidos, garantindo que o resultado final estivesse alinhado com as expectativas.\n\n• **Entregas Rápidas e de Qualidade:** Fui constantemente elogiado pela qualidade do meu trabalho e pela minha capacidade de entregar projetos antes do prazo. Meu compromisso e paixão pelo desenvolvimento se destacaram, mostrando minha dedicação e profissionalismo.\n\n**Impacto:** Na Upper ID, tive a oportunidade de aprimorar minhas habilidades em desenvolvimento web, criando soluções responsivas e otimizadas, sempre focado no usuário e entregando projetos rapidamente.",
+        "techs": "JavaScript, CSS3, ECMAScript, Adobe Photoshop, GitFlow, WordPress, CSS, jQuery, HTML5, Git, HTML"
+      }
+    }
+  },
+  "works_page": {
+    "title": "projetos",
+    "subtitle": "Lista dos meus projetos",
+    "complete_apps_section": {
+      "title": "complete-apps",
+      "projects_list": {
+        "project1": {
+          "title": "### Renan Theodoro | Meu Portfólio",
+          "description": "Portfólio desenvolvido em Next.js com arquitetura MVVM e suporte a i18n."
+        },
+        "project2": {
+          "title": "### URL Shortener | Flutter App",
+          "description": "A Flutter app that allows users to shorten URLs easily. It communicates with a backend API to generate shortened links and provides a user-friendly interface for managing and copying those links."
+        },
+        "project3": {
+          "title": "### PJZen Website",
+          "description": "Criação de um site responsivo e moderno para a PJZen para garantir uma navegação intuitiva e bom desempenho em dispositivos diversos."
+        },
+        "project4": {
+          "title": "### Sua Sede",
+          "description": "**Sua Sede** é uma plataforma empresarial que oferece Escritório Virtual, Salas de Reunião e Contabilidade Digital, com design responsivo e fácil navegação."
+        },
+        "project5": {
+          "title": "### PJZen Platform",
+          "description": "**PJZen Platform** é uma solução completa para automação da emissão de notas fiscais, com autenticação de usuário, administração e duplicação automática de notas, facilitando o gerenciamento contábil."
+        },
+        "project6": {
+          "title": "### Indfer",
+          "description": "Site institucional para a Indfer, desenvolvido com Vue.js e integrado ao Prismic CMS e GraphQL."
+        },
+        "project7": {
+          "title": "### Incipit",
+          "description": "Website institucional desenvolvido com Vue.js, integrado ao Prismic CMS e GraphQL."
+        },
+        "project8": {
+          "title": "### Antigo Portifólio",
+          "description": "Meu antigo website de portfólio criado em 2017."
+        }
+      }
+    },
+    "small_projects_section": {
+      "title": "small-projects",
+      "projects_list": {
+        "project1": {
+          "title": "### Corona Virus Brazil",
+          "description": "Projeto desenvolvido para fornecer informações precisas sobre os casos confirmados de COVID-19 no Brasil, com o objetivo de contribuir para a disseminação de dados corretos e atualizados."
+        },
+        "project2": {
+          "title": "### Leaflet Map Mock",
+          "description": "Um projeto mock para teste de interação com mapa para o projeto meuDNA"
+        },
+        "project3": {
+          "title": "### Map List Navigator",
+          "description": "Um projeto mock para teste de interação com mapa para o projeto meuDNA em Flutter"
+        },
+        "project4": {
+          "title": "### URL Shortener API",
+          "description": "A backend API built using Node.js, Express, and Firebase Functions to shorten URLs. It stores original URLs and generates unique shortened versions. The API is designed to be scalable and secure, with a focus on performance and ease of use."
+        },
+        "project5": {
+          "title": "### Multi Talentos",
+          "description": "Projeto do meu TCC feito em Angular na versão 1.4.4 em 2016"
+        }
+      }
+    }
+  },
+  "contacts_page": {
+    "title": "contato",
+    "content": "\n\n**Quem sou eu?** \n\nSe você está procurando um **desenvolvedor de software experiente**, adoraria me conectar e discutir como posso **contribuir para sua equipe**. Com experiência em **desenvolvimento front-end**, **frameworks web modernos** e **desenvolvimento de aplicativos móveis**, estou confiante em entregar **soluções escaláveis** e **de alta qualidade**.  \n\n**Vamos nos conectar e explorar oportunidades para trabalharmos juntos!**",
+    "message_me": "Entre em contato aqui",
+    "all_media_section": {
+      "title": "redes-sociais"
+    }
+  }
+}

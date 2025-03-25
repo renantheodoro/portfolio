@@ -1,0 +1,182 @@
+@import "@/styles/_functions.scss";
+
+/** 
+ * Container class styles 
+ * - The container is mobile-first, with a default width of 100% and padding applied for mobile.
+ * - For desktop, max-width and padding adjustments are made.
+ */
+.container {
+  margin: 0 auto;
+  position: relative;
+  max-width: 100%; /** Full width by default for mobile */
+  width: 100%;
+  padding: 0 1rem; /** Mobile padding */
+
+  /** 
+   * For desktop, apply max-width and adjust padding 
+   * - Uses the breakpoint function to target the desktop size.
+   */
+  @media screen and (min-width: breakpoint("desktop")) {
+    max-width: 1024px;
+    padding: 0; /** Remove padding for desktop */
+  }
+
+  /** 
+   * Mobile-first approach: Default styles already apply to mobile,
+   * no additional mobile styles are necessary, but this is where you could add mobile-specific adjustments if needed.
+   */
+}
+
+.text-frame {
+  &:not(.flex) {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  font-size: 1rem;
+  color: var(--grey);
+  padding: 0.5rem;
+  border: 1px solid var(--grey);
+
+  &__shape {
+    width: 1rem;
+    height: 1rem;
+
+    background-color: var(--primary);
+
+    margin-right: 0.5rem;
+  }
+
+  &--center {
+    margin: 0 auto;
+  }
+
+  &--medium-pad {
+    width: 100%;
+    padding: 1rem;
+
+    @media screen and (min-width: breakpoint("tablet")) {
+      width: auto;
+      min-width: 320px;
+    }
+  }
+
+  &--white-highlights {
+    p strong {
+      color: var(--white);
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  strong {
+    font-weight: bold;
+  }
+}
+
+.simple-logo {
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    font-size: 1rem;
+    color: var(--white);
+    font-weight: bold;
+  }
+
+  img {
+    margin-right: 0.5rem;
+  }
+}
+
+.section-block {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .section-block__header__line {
+      width: 500px;
+      height: 1px;
+      background-color: var(--primary);
+      margin-left: 1rem;
+    }
+
+    h2 {
+      position: relative;
+
+      span {
+        font-size: inherit;
+        color: var(--primary);
+      }
+    }
+
+    p {
+      margin-bottom: 1rem;
+
+      strong {
+        color: var(--white);
+      }
+
+      ul li a:hover span {
+        color: var(--white);
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+
+    p {
+      margin-bottom: 1rem;
+
+      strong {
+        color: var(--white);
+      }
+
+      ul li a:hover span {
+        color: var(--white);
+      }
+    }
+  }
+
+  .text-frame p {
+    margin-bottom: 0;
+  }
+}
+
+.page-title {
+  padding-top: var(--section-padding);
+
+  h1 {
+    font-size: 2rem;
+    color: var(--white);
+    font-weight: bold;
+
+    span {
+      font-size: inherit;
+      color: var(--primary);
+      font-weight: inherit;
+    }
+  }
+
+  p {
+    margin-bottom: 1rem;
+
+    strong {
+      color: var(--white);
+    }
+  }
+}

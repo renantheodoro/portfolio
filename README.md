@@ -65,3 +65,7 @@ To run this project on your local machine, follow these steps:
 
 ## 🌟 Deployment
 The site is deployed using **GitHub Actions** for continuous deployment. Any changes pushed to the `main` branch are automatically deployed to GitHub Pages (or your preferred platform).
+
+## Credits
+
+Layout credits: https://www.figma.com/@elias_dev
