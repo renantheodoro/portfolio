@@ -4,6 +4,19 @@ import Link from "next/link";
 import Image from "next/image";
 import CustomMarkdown from "@/components/CustomMarkdown";
 
+export const dynamic = 'force-dynamic';
+
+export function generateStaticParams() {
+  return [
+    {
+      locale: "pt",
+    },
+    {
+      locale: "en",
+    },
+  ];
+}
+
 export default function ContactsPage() {
   const t = useTranslations("contacts_page");
 

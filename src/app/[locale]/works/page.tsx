@@ -2,6 +2,19 @@ import { useTranslations } from "next-intl";
 import ButtonLink from "@/components/ButtonLink";
 import ProjectItem from "@/components/ProjectItem";
 
+export const dynamic = 'force-dynamic';
+
+export function generateStaticParams() {
+  return [
+    {
+      locale: "pt",
+    },
+    {
+      locale: "en",
+    },
+  ];
+}
+
 export default function WorksPage() {
   const t = useTranslations("works_page");
 
