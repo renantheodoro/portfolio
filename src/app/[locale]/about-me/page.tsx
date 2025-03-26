@@ -4,6 +4,19 @@ import Image from "next/image";
 import SkillBlock from "@/components/SkillBlock";
 import CustomMarkdown from "@/components/CustomMarkdown";
 
+export const dynamic = 'force-dynamic';
+
+export function generateStaticParams() {
+  return [
+    {
+      locale: "pt",
+    },
+    {
+      locale: "en",
+    },
+  ];
+}
+
 export default function AboutMePage() {
   const homeT = useTranslations("home_page");
   const t = useTranslations("about_me_page");

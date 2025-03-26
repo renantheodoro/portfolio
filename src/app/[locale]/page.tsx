@@ -7,6 +7,19 @@ import ProjectItem from "@/components/ProjectItem";
 import SkillBlock from "@/components/SkillBlock";
 import CustomMarkdown from "@/components/CustomMarkdown";
 
+export const dynamic = 'force-dynamic';
+
+export function generateStaticParams() {
+  return [
+    {
+      locale: "pt",
+    },
+    {
+      locale: "en",
+    },
+  ];
+}
+
 export default function HomePage() {
   const t = useTranslations("home_page");
 
