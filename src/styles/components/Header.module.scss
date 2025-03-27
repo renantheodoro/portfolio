@@ -1,27 +1,100 @@
+@import "@/styles/_functions.scss";
+
 .header {
-  padding: 2rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+
+  width: 100%;
+  height: var(--header-height);
+
+  padding: 1rem 0;
+
+  background-color: var(--background);
+
+  @media screen and (min-width: breakpoint("desktop")) {
+    padding: 2rem 0;
+    height: var(--header-height-desktop);
+  }
 
   &__menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    height: calc(100% - var(--header-height));
+
+    padding: 1rem;
+    padding-top: 2rem;
+
+    background-color: var(--background);
+
+    transform: translateX(100%);
+
+    transition: ease 0.3s;
+
+    overflow: auto;
+
+    padding-bottom: 4rem;
+
+    &--active {
+      transform: translateX(0);
+    }
+
+    @media screen and (min-width: breakpoint("desktop")) {
+      width: auto;
+      height: auto;
+
+      padding-top: 0;
+      padding-bottom: 0;
+
+      transform: translateX(0);
+
+      overflow: visible;
+    }
 
     & > ul {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
+      flex-direction: column;
+
+      &> li {
+        margin-bottom: 2rem;
+
+        @media screen and (min-width: breakpoint("desktop")) {
+          margin-bottom: 1rem;
+        }
+      }
+
+      @media screen and (min-width: breakpoint("desktop")) {
+        align-items: center;
+        flex-direction: row;
+      }
     }
 
     &__item {
-      margin-left: 1rem;
-
       a {
+        font-size: 2rem;
         color: var(--grey);
+
+        span {
+          font-size: 2rem;
+
+          @media screen and (min-width: breakpoint("desktop")) {
+            font-size: 1rem;
+          }
+        }
 
         &:hover {
           color: var(--white);
+
           span {
+            font-size: 2rem;
             color: var(--primary);
+
+            @media screen and (min-width: breakpoint("desktop")) {
+              font-size: 1rem;
+            }
           }
         }
       }
@@ -31,24 +104,68 @@
         color: var(--primary);
       }
     }
+
+    button {
+      font-size: 2rem;
+    }
+
+    @media screen and (min-width: breakpoint("desktop")) {
+      position: static;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 0;
+
+      & > ul {
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      &__item {
+        margin-left: 1rem;
+
+        a {
+          font-size: 1rem;
+
+          span {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
   }
 
   &__language {
-    font-weight: bold;
     position: relative;
     padding: 0;
-    margin-left: 1rem;
     min-width: 20px;
     background-color: var(--background);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: var(--grey);
+
     cursor: pointer;
+
+    width: 100%;
 
     &:hover {
       color: var(--white);
       background-color: transparent;
+    }
+
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-direction: row;
+
+      font-size: 2rem;
+      font-weight: bold;
+      color: var(--grey);
+
+      @media screen and (min-width: breakpoint("desktop")) {
+        font-size: 1rem;
+        margin-left: 1rem;
+      }
     }
 
     img {
@@ -58,15 +175,15 @@
     }
 
     &__menu {
-      position: absolute;
-      top: calc(100% + 1rem);
-      right: 0;
+      width: 100%;
 
       min-width: 90px;
 
+      display: flex;
       flex-direction: column;
-      justify-content: end;
       align-items: flex-start;
+
+      justify-content: end;
 
       border: 1px solid var(--grey);
       background: var(--background);
@@ -75,15 +192,37 @@
       transform: translateY(-5px);
       transition: opacity 0.3s ease, transform 0.3s ease;
       pointer-events: none;
-      z-index: 9;
+
+      margin-top: 1rem;
+      
+      @media screen and (min-width: breakpoint("desktop")) {
+        width: auto;
+        align-items: flex-start;
+        
+        position: absolute;
+        top: calc(100% + 1rem);
+        right: 0;
+        z-index: 9;
+
+        margin-top: 0;
+      }
 
       li {
         width: 100%;
         padding: 0.5rem 1rem;
-        text-align: right;
         cursor: pointer;
 
+        font-size: 2rem;
+        text-align: left;
+
         margin-bottom: 0;
+
+        @media screen and (min-width: breakpoint("desktop")) {
+          font-size: 1rem;
+          text-align: right;
+
+          margin-bottom: 0;
+        }
 
         &:hover {
           background-color: var(--primary);
@@ -101,6 +240,78 @@
         opacity: 1;
         transform: translateY(0);
         pointer-events: all;
+      }
+    }
+  }
+
+  &__menu-button {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+
+    background-color: transparent;
+
+    padding: 0.5rem;
+
+    position: relative;
+
+    width: 40px;
+    height: 40px;
+
+    @media screen and (min-width: breakpoint("desktop")) {
+      display: none;
+    }
+
+    &:hover {
+      background-color: transparent;
+    }
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 5px;
+      right: 0;
+
+      display: block;
+
+      background-color: #d9d9d9;
+
+      width: 24px;
+      height: 2px;
+
+      transition: ease 0.3s;
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 15px;
+      right: 0;
+
+      display: block;
+
+      background-color: #d9d9d9;
+
+      width: 15px;
+      height: 2px;
+
+      transition: ease 0.3s;
+    }
+
+    &--active {
+      &::before {
+        width: 24px;
+        transform: rotate(45deg);
+        top: 10px;
+      }
+
+      &::after {
+        top: 10px;
+        width: 24px;
+        transform: rotate(-45deg);
       }
     }
   }

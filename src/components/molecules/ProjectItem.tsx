@@ -2,7 +2,7 @@
 
 import style from "@/styles/components/ProjectItem.module.scss";
 import Image from "next/image";
-import CustomMarkdown from "./CustomMarkdown";
+import CustomMarkdown from "@/components/molecules/CustomMarkdown";
 
 interface ProjectItemProps {
   mediaPath?: string;

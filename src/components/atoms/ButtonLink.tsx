@@ -17,11 +17,14 @@ export default function ButtonLink({ path, text, type, onClick }: ButtonProps) {
     }
   };
 
+  const isExternal = /^(https?:\/\/|www\.)/.test(path);
+
   return (
     <div onClick={handleClick}>
       <Link
         href={path}
-        target="_blank"
+        target={isExternal ? "_blank" : "_self"}
+        rel={isExternal ? "noopener noreferrer" : undefined}
         className={`${style.button} ${style[`button--${type ?? "primary"}`]}`}
       >
         {text}

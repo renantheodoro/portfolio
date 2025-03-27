@@ -22,6 +22,8 @@ export default function Header({
 }: {
   initialLanguage: string;
 }) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const t = useTranslations("header_menu");
   const language = useTranslations("language");
 
@@ -39,7 +41,6 @@ export default function Header({
     setSelectedLanguage(lang);
     setLanguageMenuActive(false);
 
-    // Pega o caminho atual da URL
     const currentPath = pathname;
 
     const languagePrefix = lang === "EN" ? "/en" : "/pt";
@@ -49,6 +50,14 @@ export default function Header({
     } else {
       router.push(`${languagePrefix}${currentPath}`);
     }
+  };
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
   };
 
   useEffect(() => {
@@ -70,33 +79,38 @@ export default function Header({
           </div>
         </Link>
 
-        <nav className={styles["header__menu"]}>
+        <nav
+          className={`
+          ${styles["header__menu"]}
+          ${isMenuOpen ? styles["header__menu--active"] : ""}
+        `}
+        >
           <ul>
-            <li className={styles["header__menu__item"]}>
+            <li className={styles["header__menu__item"]} onClick={closeMenu}>
               <Link href="/" passHref>
                 <span>#</span>
                 {t("links.home")}
               </Link>
             </li>
-            <li className={styles["header__menu__item"]}>
+            <li className={styles["header__menu__item"]} onClick={closeMenu}>
               <Link href="/about-me" passHref>
                 <span>#</span>
                 {t("links.about_me")}
               </Link>
             </li>
-            <li className={styles["header__menu__item"]}>
+            <li className={styles["header__menu__item"]} onClick={closeMenu}>
               <Link href="/experiences" passHref>
                 <span>#</span>
                 {t("links.experiences")}
               </Link>
             </li>
-            <li className={styles["header__menu__item"]}>
+            <li className={styles["header__menu__item"]} onClick={closeMenu}>
               <Link href="/works" passHref>
                 <span>#</span>
                 {t("links.works")}
               </Link>
             </li>
-            <li className={styles["header__menu__item"]}>
+            <li className={styles["header__menu__item"]} onClick={closeMenu}>
               <Link href="/contacts" passHref>
                 <span>#</span>
                 {t("links.contacts")}
@@ -109,14 +123,15 @@ export default function Header({
                 }`}
                 onClick={toggleLanguageMenu}
               >
-                {selectedLanguage}
-                <Image
-                  src="/svg/angle-down.svg"
-                  alt="angle"
-                  width={10}
-                  height={10}
-                />
-
+                <span>
+                  {selectedLanguage}
+                  <Image
+                    src="/svg/angle-down.svg"
+                    alt="angle"
+                    width={10}
+                    height={10}
+                  />
+                </span>
                 {languageMenuActive && (
                   <ul className={styles["header__language__menu"]}>
                     <li onClick={() => changeLanguage("EN")}>EN</li>
@@ -127,6 +142,14 @@ export default function Header({
             </li>
           </ul>
         </nav>
+
+        <button
+          className={`
+              ${styles["header__menu-button"]}
+              ${isMenuOpen ? styles["header__menu-button--active"] : ""}
+            `}
+          onClick={toggleMenu}
+        ></button>
       </div>
     </header>
   );
