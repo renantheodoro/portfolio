@@ -7,11 +7,10 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className="container">
         <div className="flex flex-col">
-          <div className="flex flex-row justify-between">
-
-            <div className="w-1/2 flex flex-col">
-              <div className="flex justify-start items-center mb-2">
-                <div className="simple-logo flex justify-between">
+          <div className="flex flex-col lg:flex-row justify-between">
+            <div className="w-full lg:w-1/2 flex flex-col mb-2 lg:mb-0">
+              <div className="flex flex-col lg:flex-row justify-start items-center lg:items-start mb-2">
+                <div className="simple-logo flex flex-row justify-between mb-4 lg:mb-0">
                   <Image
                     width={16}
                     height={16}
@@ -24,15 +23,17 @@ export default function Footer() {
                 <p className="ml-6">renan.b.theodoro@gmail.com</p>
               </div>
 
-              <div className="flex flex-row">
+              <div className="flex justify-center lg:justify-start text-center lg:text-left mt-2 mb-2 lg:mt-0 lg:mb-0">
                 <p>Front-end and mobile developer</p>
               </div>
             </div>
 
-            <div className="w-1/2 flex flex-col items-start">
-              <h3>Media</h3>
+            <div className="w-full lg:w-1/2 flex flex-col items-start mt-4 lg:mt-0">
+              <h3 className="w-full lg:w-auto text-center lg:text-left ">
+                Media
+              </h3>
 
-              <div className="flex flex-row flex-wrap items-start gap-4 mt-2">
+              <div className="w-full lg:w-auto flex flex-row flex-wrap justify-center lg:justify-start items-center lg:items-start gap-4 mt-2">
                 <Link
                   href="https://www.instagram.com/renantheodoro"
                   target="_blank"
@@ -79,7 +80,12 @@ export default function Footer() {
           </div>
 
           <div className="w-full flex flex-row text-center mt-12">
-            <p className="w-full">© Copyright 2025. Made by Renan</p>
+            <p className="w-full">
+              © Copyright 2025. Made by{" "}
+              <a href="https://github.com/renantheodoro/" target="_blank">
+                Renan Theodoro
+              </a>
+            </p>
           </div>
         </div>
       </div>

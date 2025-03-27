@@ -19,15 +19,15 @@
       "current_job_info": "Atualmente trabalhando no **Santander**"
     },
     "quote_section": {
-      "quote": "A única maneira de ir rápido é ir bem.",
+      "quote": "The only way to go fast is to go well.",
       "author": "- Robin C. Martin"
     },
     "projects_section": {
-      "title": "projetos",
+      "title": "## projetos",
       "view_all": "Ver todos"
     },
     "skills_section": {
-      "title": "habilidades",
+      "title": "## habilidades",
       "skills_list": {
         "languages_title": "Linguagens",
         "frameworks_title": "Frameworks & Bibliotecas",
@@ -39,21 +39,21 @@
       }
     },
     "about_section": {
-      "title": "sobre-mim",
-      "text": "**Quem sou eu?**\n\nOlá, eu sou Renan Theodoro!\n\nSou um Desenvolvedor de Software Sênior com **mais de 10 anos de experiência** no desenvolvimento de aplicativos **web e mobile**, especializando-me em frameworks como **Flutter, React, Angular** e **Vue.js**, com foco em **desempenho**, **escalabilidade** e **arquitetura de software limpa**.\n\nSou apaixonado por **Clean Code**, **princípios SOLID** e pela criação de soluções **manuteníveis** e de **alta qualidade**.\n\nMinhas habilidades se estendem para **integração de APIs**, **gerenciamento de estado** e **desenvolvimento full-stack** com tecnologias como **Node.js, Firebase** e **PHP**.\n\nAtualmente, estou expandindo minha experiência em **Next.js** e **React Native**.\n\n**Vamos construir algo incrível juntos!**",
+      "title": "## sobre-mim",
+      "content": "**Quem sou eu?**\n\nOlá, eu sou Renan Theodoro!\n\nSou um Desenvolvedor de Software Sênior com **mais de 10 anos de experiência** no desenvolvimento de aplicativos **web e mobile**, especializando-me em frameworks como **Flutter, React, Angular** e **Vue.js**, com foco em **desempenho**, **escalabilidade** e **arquitetura de software limpa**.\n\nSou apaixonado por **Clean Code**, **princípios SOLID** e pela criação de soluções **manuteníveis** e de **alta qualidade**.\n\nMinhas habilidades se estendem para **integração de APIs**, **gerenciamento de estado** e **desenvolvimento full-stack** com tecnologias como **Node.js, Firebase** e **PHP**.\n\nAtualmente, estou expandindo minha experiência em **Next.js** e **React Native**.\n\n**Vamos construir algo incrível juntos!**",
       "button_text": "Leia mais"
     },
     "contacts_section": {
-      "title": "contatos",
-      "text": "Se você está procurando um **desenvolvedor de software experiente**, adoraria conectar e discutir como posso **contribuir para sua equipe**. Com expertise em **desenvolvimento front-end**, **frameworks modernos para web** e **desenvolvimento de aplicativos mobile**, estou confiante em entregar soluções **escaláveis** e de **alta qualidade**.\n\n**Vamos nos conectar e explorar oportunidades para trabalharmos juntos!**",
-      "message_me": "Entre em contato aqui"
+      "title": "## contatos",
+      "content": "Se você está procurando um **desenvolvedor de software experiente**, adoraria conectar e discutir como posso **contribuir para sua equipe**. Com expertise em **desenvolvimento front-end**, **frameworks modernos para web** e **desenvolvimento de aplicativos mobile**, estou confiante em entregar soluções **escaláveis** e de **alta qualidade**.\n\n**Vamos nos conectar e explorar oportunidades para trabalharmos juntos!**",
+      "message_me": "Entre em contato"
     }
   },
   "about_me_page": {
     "title": "sobre-mim",
     "content": "**Quem sou eu?**\n\nCom mais de **10 anos de experiência** em desenvolvimento de software, me especializo em aplicações web e móveis utilizando **Flutter, React, Angular** e **Vue.js**. Meu foco é em **performance**, **escalabilidade** e **arquitetura limpa**, entregando **experiências de alta qualidade** e **fáceis de usar**.\n\nSou apaixonado por **Clean Code**, **princípios SOLID** e garantir que meu código seja **manutenível** e **escalável**. Também tenho experiência com tecnologias de backend como **Node.js**, **Firebase** e **PHP**, permitindo-me criar **soluções full-stack**. Atualmente, estou expandindo meu conhecimento em **Next.js** e **React Native** para aprimorar ainda mais as aplicações que crio.\n\n**Vamos criar algo incrível juntos!**",
     "fun_facts_section": {
-      "title": "fatos-sobre-mim",
+      "title": "## fatos-sobre-mim",
       "fun_fact_1": "Eu **toco guitarra** no meu tempo livre",
       "fun_fact_2": "Sou um grande fã de **café**",
       "fun_fact_3": "Eu amo **churrasco**!",
@@ -118,7 +118,7 @@
     "title": "projetos",
     "subtitle": "Lista dos meus projetos",
     "complete_apps_section": {
-      "title": "complete-apps",
+      "title": "## projetos-online",
       "projects_list": {
         "project1": {
           "title": "### Renan Theodoro | Meu Portfólio",
@@ -155,7 +155,7 @@
       }
     },
     "small_projects_section": {
-      "title": "small-projects",
+      "title": "## projetos-menores",
       "projects_list": {
         "project1": {
           "title": "### Corona Virus Brazil",
@@ -182,8 +182,6 @@
   },
   "contacts_page": {
     "title": "contato",
-    "content": "\n\n**Quem sou eu?** \n\nSe você está procurando um **desenvolvedor de software experiente**, adoraria me conectar e discutir como posso **contribuir para sua equipe**. Com experiência em **desenvolvimento front-end**, **frameworks web modernos** e **desenvolvimento de aplicativos móveis**, estou confiante em entregar **soluções escaláveis** e **de alta qualidade**.  \n\n**Vamos nos conectar e explorar oportunidades para trabalharmos juntos!**",
-    "message_me": "Entre em contato aqui",
     "all_media_section": {
       "title": "redes-sociais"
     }

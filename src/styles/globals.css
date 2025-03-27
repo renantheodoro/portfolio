@@ -20,6 +20,13 @@
  * This value represents the combined padding of the top and bottom sections.
 */
   --section-padding: 2.5rem;
+
+  /*
+ * Header height
+ * This value is shared to header in desktop
+*/
+  --header-height: 48px;
+  --header-height-desktop: 96px;
 }
 
 @theme inline {
@@ -37,6 +44,14 @@ body {
   line-height: 1.5; /* For more comfortable reading */
   margin: 0;
   padding: 0;
+}
+
+main {
+  padding-top: calc(var(--header-height) + 1rem);
+
+  @media screen and (min-width: 1025px) {
+    padding-top: var(--header-height-desktop);
+  }
 }
 
 /* Headings */
@@ -79,10 +94,11 @@ a {
   color: var(--white);
   text-decoration: none;
   transition: color 0.3s ease-in-out;
+}
 
-  &:hover {
-    color: var(--primary); /* Change color to purple on hover */
-  }
+a:hover,
+a:hover span {
+  color: var(--primary); /* Change color to purple on hover */
 }
 
 /* Strong (bold text) */

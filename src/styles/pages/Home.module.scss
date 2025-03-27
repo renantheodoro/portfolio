@@ -8,8 +8,7 @@
 }
 
 .quote-section {
-  padding-top: var(--section-padding);
-  padding-bottom: var(--section-padding);
+  padding: var(--section-padding) 1rem;
 
   &__sentence {
     display: block;

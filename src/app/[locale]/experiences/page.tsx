@@ -1,4 +1,4 @@
-import CustomMarkdown from "@/components/CustomMarkdown";
+import CustomMarkdown from "@/components/molecules/CustomMarkdown";
 import { useTranslations } from "next-intl";
 
 export const dynamic = 'force-dynamic';

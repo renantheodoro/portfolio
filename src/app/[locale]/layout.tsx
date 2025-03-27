@@ -1,8 +1,8 @@
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Header from "@/components/organisms/Header";
+import Footer from "@/components/organisms/Footer";
 import { Geist, Geist_Mono } from "next/font/google";
 import localeEn from "../../../public/messages/en.json";
 import localePt from "../../../public/messages/pt.json";

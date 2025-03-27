@@ -1,10 +1,10 @@
 import { useTranslations } from "next-intl";
 import styles from "@/styles/pages/AboutMe.module.scss";
 import Image from "next/image";
-import SkillBlock from "@/components/SkillBlock";
-import CustomMarkdown from "@/components/CustomMarkdown";
+import CustomMarkdown from "@/components/molecules/CustomMarkdown";
+import SkillsSection from "@/components/organisms/SkillsSection";
 
-export const dynamic = 'force-dynamic';
+export const dynamic = "force-dynamic";
 
 export function generateStaticParams() {
   return [
@@ -18,7 +18,6 @@ export function generateStaticParams() {
 }
 
 export default function AboutMePage() {
-  const homeT = useTranslations("home_page");
   const t = useTranslations("about_me_page");
 
   return (
@@ -55,113 +54,15 @@ export default function AboutMePage() {
         </div>
       </section>
 
-      <section className="section-block">
-        <div className="container">
-          <div className="section-block__header">
-            <div className="flex flex-row justify-start items-center">
-              <h2>
-                <span>#</span>
-                {homeT("skills_section.title")}
-              </h2>
-              <div className="hidden md:block section-block__header__line"></div>
-            </div>
-          </div>
-
-          <div className="section-block__content flex flex-wrap justify-between gap-4">
-            <div className="hidden lg:flex flex-col flex-1 basis-full lg:basis-[calc(20%-4rem)] space-y-4">
-              <Image
-                src="/svg/skills-shapes.svg"
-                alt="shapes"
-                width={0}
-                height={0}
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "contain",
-                  objectPosition: "0 0",
-                }}
-              />
-            </div>
-            <div className="flex flex-col flex-1 basis-full md:basis-[calc(25%-4rem)] lg:basis-[calc(20%-4rem)] space-y-4">
-              <SkillBlock
-                title={homeT("skills_section.skills_list.languages_title")}
-                skills={["Javascript", "Dart", "Typescript"]}
-              />
-              <SkillBlock
-                title={homeT("skills_section.skills_list.frameworks_title")}
-                skills={[
-                  "Flutter React",
-                  "React Native",
-                  "Next.js",
-                  "Vuejs",
-                  "Angular",
-                  "Node.js",
-                  "NestJS",
-                ]}
-              />
-            </div>
-            <div className="flex flex-col flex-1 basis-full md:basis-[calc(25%-4rem)] lg:basis-[calc(20%-4rem)] space-y-4">
-              <SkillBlock
-                title={homeT("skills_section.skills_list.tools_devops_title")}
-                skills={[
-                  "Git",
-                  "Git Flow",
-                  "Github Flow",
-                  "Docker",
-                  "Firebase Hosting & Functions",
-                  "GitHub Actions",
-                ]}
-                startsWithBold={false}
-              />
-              <SkillBlock
-                title={homeT("skills_section.skills_list.databases_title")}
-                skills={["Firebase"]}
-                skillDescription="Firestore, Realtime Database"
-              />
-            </div>
-            <div className="flex flex-col flex-1 basis-full md:basis-[calc(25%-4rem)] lg:basis-[calc(20%-4rem)] space-y-4">
-              <SkillBlock
-                title={homeT(
-                  "skills_section.skills_list.arch_best_practices_title"
-                )}
-                skills={[
-                  "Clean Architecture",
-                  "MVVM",
-                  "BEM (SCSS)",
-                  "SOLID Principles",
-                  "Design Systems",
-                ]}
-              />
-            </div>
-            <div className="flex flex-col flex-1 basis-full md:basis-[calc(25%-4rem)] lg:basis-[calc(20%-4rem)] space-y-4">
-              <SkillBlock
-                title={homeT("skills_section.skills_list.other_skills_title")}
-                skills={[
-                  "REST API GraphQL",
-                  "HTML5",
-                  "SASS",
-                  "Cordova Ionic",
-                  "Agile (Scrum)",
-                  "Clean Code",
-                ]}
-              />
-              <SkillBlock
-                title={homeT("skills_section.skills_list.testings_title")}
-                skills={["Jest Provider", "BLoC", "Jasmine"]}
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      <SkillsSection />
 
       <section className="section-block">
         <div className={`${styles["background-logo-shape"]} container`}>
           <div className="section-block__header">
             <div className="flex flex-row justify-start items-center">
-              <h2>
-                <span>#</span>
+              <CustomMarkdown tag="h2" hasHashtag={true}>
                 {t("fun_facts_section.title")}
-              </h2>
+              </CustomMarkdown>
             </div>
           </div>
 
