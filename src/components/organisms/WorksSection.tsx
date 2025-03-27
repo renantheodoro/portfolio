@@ -43,7 +43,7 @@ export default function WorksSection({
           description={t(
             "complete_apps_section.projects_list.project1.description"
           )}
-          techs={["React", "Next.js", "TypeScript", "SCSS", "i18n"]}
+          techs={["React", "Next.js", "TypeScript", "SCSS", "i18n", "Vercel"]}
           mediaPath="/images/project-1.png"
         >
           <ButtonLink path="https://renantheodoro.dev/" text="Live <~>" />
