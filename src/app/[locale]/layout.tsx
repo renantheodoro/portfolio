@@ -6,62 +6,8 @@ import Footer from "@/components/organisms/Footer";
 import { Geist, Geist_Mono } from "next/font/google";
 import localeEn from "../../../public/messages/en.json";
 import localePt from "../../../public/messages/pt.json";
-import '../../styles/globals.css';
-import '../../styles/layout.scss';
-
-// Use `generateStaticProps` instead of `getStaticProps` in the new app structure
-export const generateStaticProps = async ({
-  params,
-}: {
-  params: { locale: string };
-}) => {
-  const { locale } = params;
-
-  const metadata = {
-    title: "Renan Theodoro | Front-End & Mobile Developer",
-    description:
-      "Welcome to my developer portfolio. I specialize in front-end and mobile development, building dynamic web and mobile applications using React, Next.js, Flutter, and more.",
-    keywords:
-      "front-end developer, mobile developer, React, Next.js, Flutter, web development, UI/UX, JavaScript, HTML, CSS, TypeScript, app development, software development, clean code, responsive design, mobile apps, user interfaces, web applications",
-    author: "Your Name",
-    robots: "index, follow", // Ensures the page is indexed and followed by search engines
-    og: {
-      title: "Renan Theodoro | Front-End & Mobile Developer",
-      description:
-        "Explore my work in front-end and mobile development. View projects, skills, and my approach to building modern applications.",
-      image: "/path-to-your-image.jpg", // Add your image for social sharing
-      url: "https://yourwebsite.com", // Replace with your actual website URL
-      type: "website",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: "Developer Portfolio | Front-End & Mobile Developer",
-      description: "Explore my work in front-end and mobile development.",
-      image: "/path-to-your-image.jpg", // Add your image for Twitter card
-    },
-  };
-
-  let translations;
-
-  if (locale === "en") {
-    translations = localeEn;
-  } else if (locale === "pt") {
-    translations = localePt;
-  }
-
-  return {
-    props: {
-      messages: translations, // Translation messages
-      seo: metadata, // SEO data
-    },
-  };
-};
-
-export async function generateStaticParams() {
-  return ["en", "pt"].map((locale) => ({
-    locale,
-  }));
-}
+import "../../styles/globals.css";
+import "../../styles/layout.scss";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -73,88 +19,80 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-type RootLayoutProps = {
-  children: React.ReactNode;
-  params: { locale: string };
-  messages: Record<string, string>;
-  seo: {
-    title: string;
-    description: string;
-    keywords: string;
-    author: string;
-    robots: string;
-    og: {
-      title: string;
-      description: string;
-      image: string;
-      url: string;
-      type: string;
-    };
-    twitter: {
-      card: string;
-      title: string;
-      description: string;
-      image: string;
-    };
-  };
-};
-
-export default function RootLayout({
-  children,
+export const generateMetadata = async ({
   params,
-  messages,
-  seo,
-}: RootLayoutProps) {
-  const { locale } = params;
-
-  // Verificação do locale
-  if (!hasLocale(routing.locales, locale)) {
-    notFound();
-  }
-
-  const seoData = seo || {
-    description: "Default description",
-    keywords: "default, keywords",
-    author: "Your Name",
+}: {
+  params: { locale: string };
+}) => {
+  return {
+    title: "Renan Theodoro | Front-End & Mobile Developer",
+    description:
+      "Welcome to my developer portfolio. I specialize in front-end and mobile development, building dynamic web and mobile applications using React, Next.js, Flutter, and more.",
+    keywords:
+      "front-end developer, mobile developer, React, Next.js, Flutter, web development, UI/UX, JavaScript, HTML, CSS, TypeScript, app development, software development, clean code, responsive design, mobile apps, user interfaces, web applications",
+    author: "Renan Theodoro",
     robots: "index, follow",
-    og: {
-      title: "Default Title",
-      description: "Default Open Graph description",
-      image: "/default-image.jpg",
-      url: "https://yourwebsite.com",
+    openGraph: {
+      title: "Renan Theodoro | Front-End & Mobile Developer",
+      description: "Explore my work in front-end and mobile development.",
+      url: "https://www.renantheodoro.dev",
+      siteName: "Renan Theodoro",
+      images: [
+        {
+          url: "/path-to-your-image.jpg",
+          width: 1200,
+          height: 630,
+        },
+      ],
+      locale: params.locale,
       type: "website",
     },
     twitter: {
       card: "summary_large_image",
-      title: "Default Twitter Title",
-      description: "Default Twitter description",
-      image: "/default-image.jpg",
+      title: "Renan Theodoro | Front-End & Mobile Developer",
+      description: "Explore my work in front-end and mobile development.",
+      images: ["/path-to-your-image.jpg"],
+    },
+    icons: {
+      icon: [
+        { url: "/favicon/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+        { url: "/favicon/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+        { url: "/favicon/favicon.ico", type: "image/x-icon" },
+      ],
+      other: [
+        { rel: "manifest", url: "/manifest.json" },
+        { rel: "msapplication-config", url: "/browserconfig.xml" },
+        {
+          rel: "msapplication-TileImage",
+          url: "/ms-icon-144x144.png",
+          sizes: "144x144",
+        },
+      ],
     },
   };
+};
+
+export async function generateStaticParams() {
+  return ["en", "pt"].map((locale) => ({ locale }));
+}
+
+export default function RootLayout({
+  children,
+  params,
+}: {
+  children: React.ReactNode;
+  params: { locale: string };
+}) {
+  const { locale } = params;
+
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+
+  const messages = locale === "en" ? localeEn : localePt;
 
   return (
     <html lang={locale}>
-      <head>
-        {/* Meta tags for SEO */}
-        <meta name="description" content={seoData.description} />
-        <meta name="keywords" content={seoData.keywords} />
-        <meta name="author" content={seoData.author} />
-        <meta name="robots" content={seoData.robots} />
-
-        {/* Open Graph Meta Tags */}
-        <meta property="og:title" content={seoData.og.title} />
-        <meta property="og:description" content={seoData.og.description} />
-        <meta property="og:image" content={seoData.og.image} />
-        <meta property="og:url" content={seoData.og.url} />
-        <meta property="og:type" content={seoData.og.type} />
-
-        {/* Twitter Card Meta Tags */}
-        <meta name="twitter:card" content={seoData.twitter.card} />
-        <meta name="twitter:title" content={seoData.twitter.title} />
-        <meta name="twitter:description" content={seoData.twitter.description} />
-        <meta name="twitter:image" content={seoData.twitter.image} />
-      </head>
-
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
