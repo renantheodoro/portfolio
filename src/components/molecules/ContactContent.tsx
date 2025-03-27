@@ -45,20 +45,6 @@ export default function ContactContent() {
                 />
                 <span className="ml-2">renan.b.theodoro@gmail.com</span>
               </Link>
-
-              <Link
-                href="tel:5511936190701"
-                target="_blank"
-                className="flex flex-row items-center"
-              >
-                <Image
-                  src="/svg/telegram.svg"
-                  alt="telegram"
-                  width={32}
-                  height={32}
-                />
-                <span className="ml-2">+55 (11) 93619-0701</span>
-              </Link>
             </div>
           </div>
         </div>
