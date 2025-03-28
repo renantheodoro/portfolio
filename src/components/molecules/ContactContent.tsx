@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import Link from "next/link";
+import { Link } from "@/i18n/natigation";
 import Image from "next/image";
 import CustomMarkdown from "@/components/molecules/CustomMarkdown";
 

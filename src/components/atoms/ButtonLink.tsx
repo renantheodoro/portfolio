@@ -1,7 +1,7 @@
 "use client";
 
 import style from "@/styles/components/ButtonLink.module.scss";
-import Link from "next/link";
+import { Link } from "@/i18n/natigation";
 
 interface ButtonProps {
   path: string;

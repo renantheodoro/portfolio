@@ -1,8 +1,8 @@
 import { useTranslations } from "next-intl";
 
-import Link from "next/link";
 import Image from "next/image";
 import ContactContent from "@/components/molecules/ContactContent";
+import { Link } from "@/i18n/natigation";
 
 export const dynamic = "force-dynamic";
 
