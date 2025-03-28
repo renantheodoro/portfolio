@@ -1,5 +1,14 @@
 @use "../styles/functions" as functions;
 
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+
 /** 
  * Container class styles 
  * - The container is mobile-first, with a default width of 100% and padding applied for mobile.
