@@ -1,11 +1,21 @@
+import { useTranslations } from "next-intl";
+
 import CustomMarkdown from "@/components/molecules/CustomMarkdown";
+import Link from "next/link";
 
 interface SectionBlockProps {
   title: string;
   children: React.ReactNode;
+  linkSection?: string;
 }
 
-export default function SectionBlock({ title, children }: SectionBlockProps) {
+export default function SectionBlock({
+  title,
+  children,
+  linkSection,
+}: SectionBlockProps) {
+  const t = useTranslations("section_block");
+
   return (
     <section className="section-block">
       <div className="container">
@@ -15,6 +25,9 @@ export default function SectionBlock({ title, children }: SectionBlockProps) {
               {title}
             </CustomMarkdown>
           </div>
+          {linkSection ? (
+            <Link href={linkSection}>{t("view_all")} ~~&gt;</Link>
+          ) : null}
         </div>
 
         <div className="section-block__content gap-4">{children}</div>

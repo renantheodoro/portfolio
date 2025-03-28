@@ -2,6 +2,9 @@
   "language": {
     "current_language": "PT-BR"
   },
+  "section_block": {
+    "view_all": "Ver todos"
+  },
   "header_menu": {
     "links": {
       "home": "home",
@@ -23,8 +26,7 @@
       "author": "- Robin C. Martin"
     },
     "projects_section": {
-      "title": "## projetos",
-      "view_all": "Ver todos"
+      "title": "## projetos"
     },
     "skills_section": {
       "title": "## habilidades",
