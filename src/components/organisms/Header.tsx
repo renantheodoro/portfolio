@@ -6,7 +6,7 @@ import { useRouter, usePathname } from "next/navigation";
 import { setStoredLanguage } from "@/utils/local-storage";
 import styles from "@/styles/components/Header.module.scss";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/natigation";
 
 interface HeaderProps {
   currentLocation: string;

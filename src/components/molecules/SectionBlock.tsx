@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 
 import CustomMarkdown from "@/components/molecules/CustomMarkdown";
-import Link from "next/link";
+import { Link } from "@/i18n/natigation";
 
 interface SectionBlockProps {
   title: string;
