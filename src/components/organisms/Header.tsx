@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { useRouter, usePathname } from "next/navigation";
-import { setStoredLanguage } from "@/utils/local-storage";
 import styles from "@/styles/components/Header.module.scss";
 import Image from "next/image";
 import { Link } from "@/i18n/natigation";
@@ -32,7 +31,6 @@ export default function Header({ currentLocation }: HeaderProps) {
     setLanguageMenuActive(false);
 
     setSelectedLanguage(currentLanguage === "en" ? "EN" : "PT-BR");
-    setStoredLanguage(currentLanguage);
 
     const currentPath = pathname;
     const languagePrefix = currentLanguage === "en" ? "/en" : "/pt";
