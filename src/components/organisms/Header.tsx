@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import { useRouter, usePathname } from "next/navigation";
+import { getStoredLanguage, setStoredLanguage } from "@/utils/local-storage";
+
 import styles from "@/styles/components/Header.module.scss";
 import Image from "next/image";
 import Link from "next/link";
@@ -28,8 +30,9 @@ export default function Header({
   const language = useTranslations("language");
 
   const [languageMenuActive, setLanguageMenuActive] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] =
-    useState<string>(initialLanguage);
+  const [selectedLanguage, setSelectedLanguage] = useState<string>(
+    language.toString() ?? initialLanguage
+  );
   const router = useRouter();
   const pathname = usePathname();
 
@@ -41,8 +44,9 @@ export default function Header({
     setSelectedLanguage(lang);
     setLanguageMenuActive(false);
 
-    const currentPath = pathname;
+    setStoredLanguage(lang);
 
+    const currentPath = pathname;
     const languagePrefix = lang === "EN" ? "/en" : "/pt";
 
     if (currentPath.startsWith("/en") || currentPath.startsWith("/pt")) {
@@ -61,8 +65,13 @@ export default function Header({
   };
 
   useEffect(() => {
-    setSelectedLanguage(language("current_language"));
-  }, [language]);
+    const storedLanguage = getStoredLanguage();
+    if (storedLanguage) {
+      setSelectedLanguage(storedLanguage);
+    } else {
+      setSelectedLanguage(initialLanguage);
+    }
+  }, [initialLanguage]);
 
   return (
     <header className={styles.header}>
