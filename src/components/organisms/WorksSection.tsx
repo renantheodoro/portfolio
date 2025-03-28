@@ -6,17 +6,6 @@ import SectionBlock from "@/components/molecules/SectionBlock";
 
 export const dynamic = "force-dynamic";
 
-export function generateStaticParams() {
-  return [
-    {
-      locale: "pt",
-    },
-    {
-      locale: "en",
-    },
-  ];
-}
-
 interface WorksSectionProps {
   showSummary?: boolean;
   completeAppsSectionTitle?: string;

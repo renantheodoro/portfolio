@@ -3,17 +3,6 @@ import { useTranslations } from "next-intl";
 
 export const dynamic = "force-dynamic";
 
-export function generateStaticParams() {
-  return [
-    {
-      locale: "pt",
-    },
-    {
-      locale: "en",
-    },
-  ];
-}
-
 export default function WorksPage() {
   const t = useTranslations("works_page");
 

@@ -3,8 +3,6 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import Header from "@/components/organisms/Header";
 import Footer from "@/components/organisms/Footer";
-import localeEn from "../../../public/messages/en.json";
-import localePt from "../../../public/messages/pt.json";
 import "../../styles/globals.scss";
 import "../../styles/layout.scss";
 
@@ -76,29 +74,25 @@ export const generateMetadata = async ({
   };
 };
 
-export async function generateStaticParams() {
-  return ["en", "pt"].map((locale) => ({ locale }));
+interface RootLayoutParams {
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }
 
 export default async function RootLayout({
   children,
   params,
-}: {
-  children: React.ReactNode;
-  params: { locale: string };
-}) {
-  const { locale } = params;
+}: RootLayoutParams) {
+  const { locale } = await params;
 
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
 
-  const messages = locale === "en" ? localeEn : localePt;
-
   return (
     <html lang={locale}>
       <body>
-        <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider>
           <Header currentLocation={locale} />
           <main>{children}</main>
           <Footer />

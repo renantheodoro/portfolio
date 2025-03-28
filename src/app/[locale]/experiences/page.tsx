@@ -3,17 +3,6 @@ import { useTranslations } from "next-intl";
 
 export const dynamic = 'force-dynamic';
 
-export function generateStaticParams() {
-  return [
-    {
-      locale: "pt",
-    },
-    {
-      locale: "en",
-    },
-  ];
-}
-
 function renderTechs(techs: string[]) {
   return (
     <div className="flex flex-row flex-wrap gap-4 mt-4">
