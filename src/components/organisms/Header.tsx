@@ -8,32 +8,11 @@ import styles from "@/styles/components/Header.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 
-export async function getServerSideProps({ locale }: { locale: string }) {
-  let initialLanguage;
-
-  switch (locale) {
-    case "en":
-      initialLanguage = "EN";
-      break;
-    case "pt":
-      initialLanguage = "PT-BR";
-      break;
-    default:
-      initialLanguage = "EN";
-  }
-
-  return {
-    props: {
-      initialLanguage,
-    },
-  };
+interface HeaderProps {
+  currentLocation: string;
 }
 
-export default function Header({
-  initialLanguage,
-}: {
-  initialLanguage: string;
-}) {
+export default function Header({ currentLocation }: HeaderProps) {
   // i18n
   const router = useRouter();
   const pathname = usePathname();
@@ -44,7 +23,7 @@ export default function Header({
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [languageMenuActive, setLanguageMenuActive] = useState(false);
   const [selectedLanguage, setSelectedLanguage] =
-    useState<string>(initialLanguage);
+    useState<string>(currentLocation);
 
   const updateLanguage = useCallback(
     (currentLanguage: string) => {
@@ -74,8 +53,8 @@ export default function Header({
 
   useEffect(() => {
     const storedLanguage = getStoredLanguage();
-    updateLanguage(storedLanguage ?? initialLanguage);
-  }, [initialLanguage, updateLanguage]);
+    updateLanguage(storedLanguage ?? currentLocation);
+  }, [currentLocation, updateLanguage]);
 
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
   const closeMenu = () => setIsMenuOpen(false);
