@@ -6,7 +6,7 @@ import Footer from "@/components/organisms/Footer";
 import { Geist, Geist_Mono } from "next/font/google";
 import localeEn from "../../../public/messages/en.json";
 import localePt from "../../../public/messages/pt.json";
-import "../../styles/globals.css";
+import "../../styles/globals.scss";
 import "../../styles/layout.scss";
 
 const geistSans = Geist({
@@ -24,6 +24,9 @@ export const generateMetadata = async ({
 }: {
   params: { locale: string };
 }) => {
+  const metadataBase = new URL("https://www.renantheodoro.dev");
+  const { locale } = await params;
+
   return {
     title: "Renan Theodoro | Front-End & Mobile Developer",
     description:
@@ -44,7 +47,7 @@ export const generateMetadata = async ({
           height: 630,
         },
       ],
-      locale: params.locale,
+      locale: locale,
       type: "website",
     },
     twitter: {
@@ -55,8 +58,16 @@ export const generateMetadata = async ({
     },
     icons: {
       icon: [
-        { url: "/favicon/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-        { url: "/favicon/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+        {
+          url: "/favicon/favicon-16x16.png",
+          sizes: "16x16",
+          type: "image/png",
+        },
+        {
+          url: "/favicon/favicon-32x32.png",
+          sizes: "32x32",
+          type: "image/png",
+        },
         { url: "/favicon/favicon.ico", type: "image/x-icon" },
       ],
       other: [
@@ -69,6 +80,7 @@ export const generateMetadata = async ({
         },
       ],
     },
+    metadataBase,
   };
 };
 
@@ -76,14 +88,14 @@ export async function generateStaticParams() {
   return ["en", "pt"].map((locale) => ({ locale }));
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params,
 }: {
   children: React.ReactNode;
   params: { locale: string };
 }) {
-  const { locale } = params;
+  const { locale } = await params;
 
   if (!hasLocale(routing.locales, locale)) {
     notFound();

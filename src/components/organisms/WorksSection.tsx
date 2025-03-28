@@ -36,6 +36,7 @@ export default function WorksSection({
             ? completeAppsSectionTitle
             : t("complete_apps_section.title")
         }
+        linkSection={showSummary ? "/works" : undefined}
       >
         {/* NEXT PORTFOLIO WEBSITE */}
         <ProjectItem
@@ -43,7 +44,15 @@ export default function WorksSection({
           description={t(
             "complete_apps_section.projects_list.project1.description"
           )}
-          techs={["React", "Next.js", "TypeScript", "SCSS", "i18n", "Vercel"]}
+          techs={[
+            "React",
+            "Next.js",
+            "TypeScript",
+            "SCSS",
+            "i18n",
+            "Vercel",
+            "Tailwind CSS",
+          ]}
           mediaPath="/images/project-1.png"
         >
           <ButtonLink path="https://renantheodoro.dev/" text="Live <~>" />
@@ -111,111 +120,124 @@ export default function WorksSection({
           />
         </ProjectItem>
 
-        {/* SUA SEDE WEBSITE */}
-        <ProjectItem
-          title={t("complete_apps_section.projects_list.project4.title")}
-          description={t(
-            "complete_apps_section.projects_list.project4.description"
-          )}
-          techs={[
-            "Vuejs",
-            "HTML5",
-            "SASS",
-            "MVC",
-            "Firebase Hosting",
-            "Materialize css",
-          ]}
-          mediaPath="/images/thumb-sua-sede.jpg"
-        >
-          <ButtonLink path="https://sua-sede-f1f32.web.app/" text="Live <~>" />
-          <ButtonLink
-            path="https://github.com/renantheodoro/sua-sede"
-            text="Github >="
-            type="secondary"
-          />
-        </ProjectItem>
+        {showSummary ? null : (
+          <>
+            {/* SUA SEDE WEBSITE */}
+            <ProjectItem
+              title={t("complete_apps_section.projects_list.project4.title")}
+              description={t(
+                "complete_apps_section.projects_list.project4.description"
+              )}
+              techs={[
+                "Vuejs",
+                "HTML5",
+                "SASS",
+                "MVC",
+                "Firebase Hosting",
+                "Materialize css",
+              ]}
+              mediaPath="/images/thumb-sua-sede.jpg"
+            >
+              <ButtonLink
+                path="https://sua-sede-f1f32.web.app/"
+                text="Live <~>"
+              />
+              <ButtonLink
+                path="https://github.com/renantheodoro/sua-sede"
+                text="Github >="
+                type="secondary"
+              />
+            </ProjectItem>
 
-        {/* PJZEN PLATFORM */}
-        <ProjectItem
-          title={t("complete_apps_section.projects_list.project5.title")}
-          description={t(
-            "complete_apps_section.projects_list.project5.description"
-          )}
-          techs={[
-            "Vue.js",
-            "Node.js",
-            "Express",
-            "Firebase",
-            "Firebase Functions",
-            "Firestore",
-            "Plug Notas API",
-          ]}
-          mediaPath="/images/thumb-pjzen-platform.jpg"
-        >
-          <ButtonLink
-            path="https://pjzen-plataform-dev.web.app/"
-            text="Live <~>"
-          />
-          <ButtonLink
-            path="https://github.com/renantheodoro/pjzen-platform"
-            text="Github >="
-            type="secondary"
-          />
-        </ProjectItem>
+            {/* PJZEN PLATFORM */}
+            <ProjectItem
+              title={t("complete_apps_section.projects_list.project5.title")}
+              description={t(
+                "complete_apps_section.projects_list.project5.description"
+              )}
+              techs={[
+                "Vue.js",
+                "Node.js",
+                "Express",
+                "Firebase",
+                "Firebase Functions",
+                "Firestore",
+                "Plug Notas API",
+              ]}
+              mediaPath="/images/thumb-pjzen-platform.jpg"
+            >
+              <ButtonLink
+                path="https://pjzen-plataform-dev.web.app/"
+                text="Live <~>"
+              />
+              <ButtonLink
+                path="https://github.com/renantheodoro/pjzen-platform"
+                text="Github >="
+                type="secondary"
+              />
+            </ProjectItem>
 
-        {/* INDFER WEBSITE */}
-        <ProjectItem
-          title={t("complete_apps_section.projects_list.project6.title")}
-          description={t(
-            "complete_apps_section.projects_list.project6.description"
-          )}
-          techs={["Vue.js", "SCSS", "GraphQL", "Prismic CMS"]}
-          mediaPath="/images/thumb-indfer-website.jpg"
-        >
-          <ButtonLink path="https://indfer.com.br/" text="Live <~>" />
-          <ButtonLink
-            path="https://github.com/renantheodoro/indfer"
-            text="Github >="
-            type="secondary"
-          />
-        </ProjectItem>
+            {/* INDFER WEBSITE */}
+            <ProjectItem
+              title={t("complete_apps_section.projects_list.project6.title")}
+              description={t(
+                "complete_apps_section.projects_list.project6.description"
+              )}
+              techs={["Vue.js", "SCSS", "GraphQL", "Prismic CMS"]}
+              mediaPath="/images/thumb-indfer-website.jpg"
+            >
+              <ButtonLink path="https://indfer.com.br/" text="Live <~>" />
+              <ButtonLink
+                path="https://github.com/renantheodoro/indfer"
+                text="Github >="
+                type="secondary"
+              />
+            </ProjectItem>
 
-        {/* INCIPIT WEBSITE */}
-        <ProjectItem
-          title={t("complete_apps_section.projects_list.project7.title")}
-          description={t(
-            "complete_apps_section.projects_list.project7.description"
-          )}
-          techs={["Vue.js", "SCSS", "GraphQL", "Prismic CMS"]}
-          mediaPath="/images/thumb-incipit-website.jpg"
-        >
-          <ButtonLink path="https://incipit-1e948.web.app/" text="Live <~>" />
-          <ButtonLink
-            path="https://github.com/renantheodoro/indfer"
-            text="Github >="
-            type="secondary"
-          />
-        </ProjectItem>
+            {/* INCIPIT WEBSITE */}
+            <ProjectItem
+              title={t("complete_apps_section.projects_list.project7.title")}
+              description={t(
+                "complete_apps_section.projects_list.project7.description"
+              )}
+              techs={["Vue.js", "SCSS", "GraphQL", "Prismic CMS"]}
+              mediaPath="/images/thumb-incipit-website.jpg"
+            >
+              <ButtonLink
+                path="https://incipit-1e948.web.app/"
+                text="Live <~>"
+              />
+              <ButtonLink
+                path="https://github.com/renantheodoro/indfer"
+                text="Github >="
+                type="secondary"
+              />
+            </ProjectItem>
 
-        {/* OLD PORTFOLIO */}
-        <ProjectItem
-          title={t("complete_apps_section.projects_list.project8.title")}
-          description={t(
-            "complete_apps_section.projects_list.project8.description"
-          )}
-          techs={["HTML5", "SASS", "Photoshop", "UX"]}
-          mediaPath="/images/thumb-old-portfolio.jpg"
-        >
-          <ButtonLink path="https://mysite-fdf87.web.app/" text="Live <~>" />
-          <ButtonLink
-            path="https://github.com/renantheodoro/personal-website"
-            text="Github >="
-            type="secondary"
-          />
-        </ProjectItem>
+            {/* OLD PORTFOLIO */}
+            <ProjectItem
+              title={t("complete_apps_section.projects_list.project8.title")}
+              description={t(
+                "complete_apps_section.projects_list.project8.description"
+              )}
+              techs={["HTML5", "SASS", "Photoshop", "UX"]}
+              mediaPath="/images/thumb-old-portfolio.jpg"
+            >
+              <ButtonLink
+                path="https://mysite-fdf87.web.app/"
+                text="Live <~>"
+              />
+              <ButtonLink
+                path="https://github.com/renantheodoro/personal-website"
+                text="Github >="
+                type="secondary"
+              />
+            </ProjectItem>
+          </>
+        )}
       </SectionBlock>
 
-      {!showSummary ? (
+      {showSummary ? null : (
         <SectionBlock title={t("small_projects_section.title")}>
           {/* CORONA VIRUS */}
           <ProjectItem
@@ -303,7 +325,7 @@ export default function WorksSection({
             />
           </ProjectItem>
         </SectionBlock>
-      ) : null}
+      )}
     </>
   );
 }

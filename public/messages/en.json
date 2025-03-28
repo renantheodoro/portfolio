@@ -2,6 +2,9 @@
   "language": {
     "current_language": "EN"
   },
+  "section_block": {
+    "view_all": "View all"
+  },
   "header_menu": {
     "links": {
       "home": "home",
@@ -23,8 +26,7 @@
       "author": "- Robin C. Martin"
     },
     "projects_section": {
-      "title": "## projects",
-      "view_all": "View all"
+      "title": "## projects"
     },
     "skills_section": {
       "title": "## skills",
@@ -118,7 +120,7 @@
     "title": "projects",
     "subtitle": "List of my projects",
     "complete_apps_section": {
-      "title": "complete-apps",
+      "title": "## complete-apps",
       "projects_list": {
         "project1": {
           "title": "### Renan Theodoro | My Portfolio",

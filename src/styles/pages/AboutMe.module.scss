@@ -1,8 +1,8 @@
-@import "@/styles/_functions.scss";
+@use "../functions" as functions;
 
 .about-me-page {
   .background-logo-shape {
-    @media screen and (min-width: breakpoint("desktop")) {
+    @media screen and (min-width: functions.breakpoint("desktop")) {
       background-image: url(/svg/logo-shape.svg);
       background-repeat: no-repeat;
       background-position: calc(100% - 60px) calc(50% + 20px);

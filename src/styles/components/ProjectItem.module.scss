@@ -1,4 +1,4 @@
-@import "@/styles/_functions.scss";
+@use "../functions" as functions;
 
 .project-item {
   width: 100%;
@@ -9,7 +9,7 @@
 
   border: 1px solid var(--grey);
 
-  @media screen and (min-width: breakpoint("tablet")) {
+  @media screen and (min-width: functions.breakpoint("tablet")) {
     flex-basis: calc(33% - 1rem);
   }
 

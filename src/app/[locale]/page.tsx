@@ -30,7 +30,7 @@ export default function HomePage() {
           ${styles["main-section"]} 
         `}
       >
-        <div className="container flex flex-col md:flex-row lg:flex-row w-full justify-between items-center">
+        <div className="container flex flex-col md:flex-row lg:flex-rowjustify-between items-center">
           <div className="w-full md:w-1/2 lg:w-1/2 pl-1">
             <CustomMarkdown
               tag="h2"

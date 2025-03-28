@@ -1,4 +1,4 @@
-@import "@/styles/_functions.scss";
+@use "@/styles/functions" as functions;
 
 .header {
   position: fixed;
@@ -13,7 +13,7 @@
 
   background-color: var(--background);
 
-  @media screen and (min-width: breakpoint("desktop")) {
+  @media screen and (min-width: functions.breakpoint("desktop")) {
     padding: 2rem 0;
     height: var(--header-height-desktop);
   }
@@ -42,7 +42,7 @@
       transform: translateX(0);
     }
 
-    @media screen and (min-width: breakpoint("desktop")) {
+    @media screen and (min-width: functions.breakpoint("desktop")) {
       width: auto;
       height: auto;
 
@@ -58,15 +58,15 @@
       display: flex;
       flex-direction: column;
 
-      &> li {
+      & > li {
         margin-bottom: 2rem;
 
-        @media screen and (min-width: breakpoint("desktop")) {
+        @media screen and (min-width: functions.breakpoint("desktop")) {
           margin-bottom: 1rem;
         }
       }
 
-      @media screen and (min-width: breakpoint("desktop")) {
+      @media screen and (min-width: functions.breakpoint("desktop")) {
         align-items: center;
         flex-direction: row;
       }
@@ -80,7 +80,7 @@
         span {
           font-size: 2rem;
 
-          @media screen and (min-width: breakpoint("desktop")) {
+          @media screen and (min-width: functions.breakpoint("desktop")) {
             font-size: 1rem;
           }
         }
@@ -92,7 +92,7 @@
             font-size: 2rem;
             color: var(--primary);
 
-            @media screen and (min-width: breakpoint("desktop")) {
+            @media screen and (min-width: functions.breakpoint("desktop")) {
               font-size: 1rem;
             }
           }
@@ -109,7 +109,7 @@
       font-size: 2rem;
     }
 
-    @media screen and (min-width: breakpoint("desktop")) {
+    @media screen and (min-width: functions.breakpoint("desktop")) {
       position: static;
 
       display: flex;
@@ -162,7 +162,7 @@
       font-weight: bold;
       color: var(--grey);
 
-      @media screen and (min-width: breakpoint("desktop")) {
+      @media screen and (min-width: functions.breakpoint("desktop")) {
         font-size: 1rem;
         margin-left: 1rem;
       }
@@ -194,11 +194,11 @@
       pointer-events: none;
 
       margin-top: 1rem;
-      
-      @media screen and (min-width: breakpoint("desktop")) {
+
+      @media screen and (min-width: functions.breakpoint("desktop")) {
         width: auto;
         align-items: flex-start;
-        
+
         position: absolute;
         top: calc(100% + 1rem);
         right: 0;
@@ -217,7 +217,7 @@
 
         margin-bottom: 0;
 
-        @media screen and (min-width: breakpoint("desktop")) {
+        @media screen and (min-width: functions.breakpoint("desktop")) {
           font-size: 1rem;
           text-align: right;
 
@@ -259,7 +259,7 @@
     width: 40px;
     height: 40px;
 
-    @media screen and (min-width: breakpoint("desktop")) {
+    @media screen and (min-width: functions.breakpoint("desktop")) {
       display: none;
     }
 

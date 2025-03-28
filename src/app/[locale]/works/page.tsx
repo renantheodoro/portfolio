@@ -29,7 +29,7 @@ export default function WorksPage() {
         </div>
       </div>
 
-      <WorksSection />
+      <WorksSection showSummary={false} />
     </>
   );
 }
