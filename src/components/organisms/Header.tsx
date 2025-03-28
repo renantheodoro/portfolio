@@ -9,9 +9,22 @@ import Image from "next/image";
 import Link from "next/link";
 
 export async function getServerSideProps({ locale }: { locale: string }) {
+  let initialLanguage;
+
+  switch (locale) {
+    case "en":
+      initialLanguage = "EN";
+      break;
+    case "pt":
+      initialLanguage = "PT-BR";
+      break;
+    default:
+      initialLanguage = "EN";
+  }
+
   return {
     props: {
-      initialLanguage: locale || "EN",
+      initialLanguage,
     },
   };
 }
@@ -21,18 +34,21 @@ export default function Header({
 }: {
   initialLanguage: string;
 }) {
+  // i18n
+  const router = useRouter();
+  const pathname = usePathname();
+  const t = useTranslations("header_menu");
+
+  // hooks
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [languageMenuActive, setLanguageMenuActive] = useState(false);
   const [selectedLanguage, setSelectedLanguage] =
     useState<string>(initialLanguage);
 
-  const t = useTranslations("header_menu");
-  const router = useRouter();
-  const pathname = usePathname();
-
-  const changeLanguage = useCallback(
+  const updateLanguage = useCallback(
     (currentLanguage: string) => {
       setLanguageMenuActive(false);
+
       setSelectedLanguage(currentLanguage);
       setStoredLanguage(currentLanguage);
 
@@ -52,8 +68,8 @@ export default function Header({
 
   useEffect(() => {
     const storedLanguage = getStoredLanguage();
-    changeLanguage(storedLanguage || initialLanguage);
-  }, [initialLanguage, changeLanguage]);
+    updateLanguage(storedLanguage ?? initialLanguage);
+  }, [initialLanguage, updateLanguage]);
 
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
   const closeMenu = () => setIsMenuOpen(false);
@@ -75,25 +91,42 @@ export default function Header({
         </Link>
 
         <nav
-          className={`${styles["header__menu"]} ${
-            isMenuOpen ? styles["header__menu--active"] : ""
-          }`}
+          className={`
+          ${styles["header__menu"]}
+          ${isMenuOpen ? styles["header__menu--active"] : ""}
+        `}
         >
           <ul>
-            {["home", "about_me", "experiences", "works", "contacts"].map(
-              (link) => (
-                <li
-                  key={link}
-                  className={styles["header__menu__item"]}
-                  onClick={closeMenu}
-                >
-                  <Link href={`/${link}`} passHref>
-                    <span>#</span>
-                    {t(`links.${link}`)}
-                  </Link>
-                </li>
-              )
-            )}
+            <li className={styles["header__menu__item"]} onClick={closeMenu}>
+              <Link href="/" passHref>
+                <span>#</span>
+                {t("links.home")}
+              </Link>
+            </li>
+            <li className={styles["header__menu__item"]} onClick={closeMenu}>
+              <Link href="/about-me" passHref>
+                <span>#</span>
+                {t("links.about_me")}
+              </Link>
+            </li>
+            <li className={styles["header__menu__item"]} onClick={closeMenu}>
+              <Link href="/experiences" passHref>
+                <span>#</span>
+                {t("links.experiences")}
+              </Link>
+            </li>
+            <li className={styles["header__menu__item"]} onClick={closeMenu}>
+              <Link href="/works" passHref>
+                <span>#</span>
+                {t("links.works")}
+              </Link>
+            </li>
+            <li className={styles["header__menu__item"]} onClick={closeMenu}>
+              <Link href="/contacts" passHref>
+                <span>#</span>
+                {t("links.contacts")}
+              </Link>
+            </li>
             <li>
               <button
                 className={`${styles["header__language"]} ${
@@ -112,15 +145,14 @@ export default function Header({
                 </span>
                 {languageMenuActive && (
                   <ul className={styles["header__language__menu"]}>
-                    <li onClick={() => changeLanguage("EN")}>EN</li>
-                    <li onClick={() => changeLanguage("PT-BR")}>PT-BR</li>
+                    <li onClick={() => updateLanguage("EN")}>EN</li>
+                    <li onClick={() => updateLanguage("PT-BR")}>PT-BR</li>
                   </ul>
                 )}
               </button>
             </li>
           </ul>
         </nav>
-
         <button
           className={`${styles["header__menu-button"]} ${
             isMenuOpen ? styles["header__menu-button--active"] : ""
