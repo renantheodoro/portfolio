@@ -1,4 +1,4 @@
-@import "@/styles/_functions.scss";
+@use "../styles/functions" as functions;
 
 /** 
  * Container class styles 
@@ -16,8 +16,8 @@
    * For desktop, apply max-width and adjust padding 
    * - Uses the breakpoint function to target the desktop size.
    */
-  @media screen and (min-width: breakpoint("desktop")) {
-    max-width: 1024px;
+  @media screen and (min-width: functions.breakpoint("desktop")) {
+    max-width: functions.breakpoint("tablet");
     padding: 0; /** Remove padding for desktop */
   }
 
@@ -56,7 +56,7 @@
     width: 100%;
     padding: 1rem;
 
-    @media screen and (min-width: breakpoint("tablet")) {
+    @media screen and (min-width: functions.breakpoint("tablet")) {
       width: auto;
       min-width: 320px;
     }
@@ -70,7 +70,7 @@
 
   a:hover {
     color: var(--primary);
-    
+
     & span {
       color: var(--primary);
     }

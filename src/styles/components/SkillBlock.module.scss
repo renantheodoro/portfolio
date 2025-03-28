@@ -1,4 +1,5 @@
-@import "@/styles/_functions.scss";
+@use "../functions" as functions;
+
 
 .skill-block {
   display: flex;

@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@use "tailwindcss";
 
 /* Defining the CSS variables */
 :root {
@@ -27,14 +27,6 @@
   --header-height: 48px;
   --header-height-desktop: 96px;
 }
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
-  --font-mono: var(--font-mono);
-}
-
 @font-face {
   font-family: "Fira Code";
   src: url("/fonts/FiraCode-VariableFont_wght.ttf") format("truetype");
