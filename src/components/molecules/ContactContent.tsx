@@ -5,17 +5,6 @@ import CustomMarkdown from "@/components/molecules/CustomMarkdown";
 
 export const dynamic = "force-dynamic";
 
-export function generateStaticParams() {
-  return [
-    {
-      locale: "pt",
-    },
-    {
-      locale: "en",
-    },
-  ];
-}
-
 export default function ContactContent() {
   const t = useTranslations("home_page");
 

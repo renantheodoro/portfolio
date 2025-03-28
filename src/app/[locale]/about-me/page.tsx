@@ -6,17 +6,6 @@ import SkillsSection from "@/components/organisms/SkillsSection";
 
 export const dynamic = "force-dynamic";
 
-export function generateStaticParams() {
-  return [
-    {
-      locale: "pt",
-    },
-    {
-      locale: "en",
-    },
-  ];
-}
-
 export default function AboutMePage() {
   const t = useTranslations("about_me_page");
 

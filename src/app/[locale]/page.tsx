@@ -9,17 +9,6 @@ import ContactContent from "@/components/molecules/ContactContent";
 
 export const dynamic = "force-dynamic";
 
-export function generateStaticParams() {
-  return [
-    {
-      locale: "pt",
-    },
-    {
-      locale: "en",
-    },
-  ];
-}
-
 export default function HomePage() {
   const t = useTranslations("home_page");
 

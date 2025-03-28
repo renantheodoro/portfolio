@@ -4,17 +4,6 @@ import Image from "next/image";
 import SectionBlock from "@/components/molecules/SectionBlock";
 import SkillBlock from "@/components/molecules/SkillBlock";
 
-export function generateStaticParams() {
-  return [
-    {
-      locale: "pt",
-    },
-    {
-      locale: "en",
-    },
-  ];
-}
-
 export default function SkillsSection() {
   const t = useTranslations("home_page");
 

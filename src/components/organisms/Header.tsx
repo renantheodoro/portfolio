@@ -1,9 +1,9 @@
 "use client";
 
-import { useEffect, useState, useCallback } from "react";
+import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { useRouter, usePathname } from "next/navigation";
-import { getStoredLanguage, setStoredLanguage } from "@/utils/local-storage";
+import { setStoredLanguage } from "@/utils/local-storage";
 import styles from "@/styles/components/Header.module.scss";
 import Image from "next/image";
 import Link from "next/link";
@@ -22,39 +22,29 @@ export default function Header({ currentLocation }: HeaderProps) {
   const [isBusy, setIsBusy] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [languageMenuActive, setLanguageMenuActive] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] =
-    useState<string>(currentLocation);
-
-  const updateLanguage = useCallback(
-    (currentLanguage: string) => {
-      setIsBusy(true);
-
-      setLanguageMenuActive(false);
-
-      setSelectedLanguage(currentLanguage);
-      setStoredLanguage(currentLanguage);
-
-      const currentPath = pathname;
-      const languagePrefix = currentLanguage === "EN" ? "/en" : "/pt";
-
-      if (currentPath.startsWith("/en") || currentPath.startsWith("/pt")) {
-        router.push(
-          `${languagePrefix}${currentPath.replace(/^\/(en|pt)/, "")}`
-        );
-      } else {
-        router.push(`${languagePrefix}${currentPath}`);
-      }
-
-      setIsBusy(false);
-    },
-
-    [pathname, router]
+  const [selectedLanguage, setSelectedLanguage] = useState<string>(
+    currentLocation === "en" ? "EN" : "PT-BR"
   );
 
-  useEffect(() => {
-    const storedLanguage = getStoredLanguage();
-    updateLanguage(storedLanguage ?? currentLocation);
-  }, [currentLocation, updateLanguage]);
+  const updateLanguage = (currentLanguage: string) => {
+    setIsBusy(true);
+
+    setLanguageMenuActive(false);
+
+    setSelectedLanguage(currentLanguage === "en" ? "EN" : "PT-BR");
+    setStoredLanguage(currentLanguage);
+
+    const currentPath = pathname;
+    const languagePrefix = currentLanguage === "en" ? "/en" : "/pt";
+
+    if (currentPath.startsWith("/en") || currentPath.startsWith("/pt")) {
+      router.push(`${languagePrefix}${currentPath.replace(/^\/(en|pt)/, "")}`);
+    } else {
+      router.push(`${languagePrefix}${currentPath}`);
+    }
+
+    setIsBusy(false);
+  };
 
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
   const closeMenu = () => setIsMenuOpen(false);
@@ -131,8 +121,8 @@ export default function Header({ currentLocation }: HeaderProps) {
                   </span>
                   {languageMenuActive && (
                     <ul className={styles["header__language__menu"]}>
-                      <li onClick={() => updateLanguage("EN")}>EN</li>
-                      <li onClick={() => updateLanguage("PT-BR")}>PT-BR</li>
+                      <li onClick={() => updateLanguage("en")}>EN</li>
+                      <li onClick={() => updateLanguage("pt")}>PT-BR</li>
                     </ul>
                   )}
                 </button>
