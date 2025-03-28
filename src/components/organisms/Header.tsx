@@ -73,6 +73,13 @@ export default function Header({
     }
   }, [initialLanguage]);
 
+  useEffect(() => {
+    const storedLanguage = getStoredLanguage();
+    if (storedLanguage) {
+      setSelectedLanguage(storedLanguage);
+    }
+  }, [pathname]);
+
   return (
     <header className={styles.header}>
       <div className="container flex justify-between">
