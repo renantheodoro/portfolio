@@ -54,6 +54,11 @@
   "about_me_page": {
     "title": "sobre-mim",
     "content": "**Quem sou eu?**\n\nCom mais de **10 anos de experiência** em desenvolvimento de software, me especializo em aplicações web e móveis utilizando **Flutter, React, Angular** e **Vue.js**. Meu foco é em **performance**, **escalabilidade** e **arquitetura limpa**, entregando **experiências de alta qualidade** e **fáceis de usar**.\n\nSou apaixonado por **Clean Code**, **princípios SOLID** e garantir que meu código seja **manutenível** e **escalável**. Também tenho experiência com tecnologias de backend como **Node.js**, **Firebase** e **PHP**, permitindo-me criar **soluções full-stack**. Atualmente, estou expandindo meu conhecimento em **Next.js** e **React Native** para aprimorar ainda mais as aplicações que crio.\n\n**Vamos criar algo incrível juntos!**",
+    "education_section": {
+      "title": "## educação",
+      "subtitle": "### Graduado em **Sistemas para Internet** pela [FIAP](https://www.fiap.com.br/)",
+      "legend": "São Paulo - SP | Dezembro de 2017"
+    },
     "fun_facts_section": {
       "title": "## fatos-sobre-mim",
       "fun_fact_1": "Eu **toco guitarra** no meu tempo livre",

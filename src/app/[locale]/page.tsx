@@ -82,7 +82,7 @@ export default function HomePage() {
         <div className="container">
           <div className="section-block__header">
             <div className="flex flex-row justify-start items-center">
-              <CustomMarkdown tag="h2" hasHashtag={true}>
+              <CustomMarkdown tag="h2" hasHashtag>
                 {t("about_section.title")}
               </CustomMarkdown>
               <div className="hidden md:block lg:block section-block__header__line"></div>
@@ -104,8 +104,8 @@ export default function HomePage() {
               <Image
                 src="/images/about-me-home.png"
                 alt="Renan Theodoro"
-                width={327} // Defina a largura desejada
-                height={450} // Defina a altura desejada
+                width={327}
+                height={450}
               />
             </div>
           </div>
@@ -116,7 +116,7 @@ export default function HomePage() {
         <div className="container">
           <div className="section-block__header">
             <div className="flex flex-row justify-start items-center">
-              <CustomMarkdown tag="h2" hasHashtag={true}>
+              <CustomMarkdown tag="h2" hasHashtag>
                 {t("contacts_section.title")}
               </CustomMarkdown>
 

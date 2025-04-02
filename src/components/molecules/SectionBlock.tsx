@@ -21,7 +21,7 @@ export default function SectionBlock({
       <div className="container">
         <div className="section-block__header">
           <div className="flex flex-row justify-start items-center">
-            <CustomMarkdown tag="h2" hasHashtag={true}>
+            <CustomMarkdown tag="h2" hasHashtag>
               {title}
             </CustomMarkdown>
           </div>
