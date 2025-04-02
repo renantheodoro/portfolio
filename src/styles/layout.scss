@@ -156,6 +156,25 @@
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
 
+    h3 {
+      color: var(--grey);
+      margin-bottom: 1rem;
+
+      a {
+        font-size: inherit;
+        color: var(--primary);
+        transition: ease 0.3s;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      strong {
+        color: var(--white);
+      }
+    }
+
     p {
       margin-bottom: 1rem;
 

@@ -26,6 +26,11 @@ const CustomMarkdown: React.FC<CustomMarkdownProps> = ({
             hasHashtag ? <span className="hashtag">#</span> : null,
             props.children
           ),
+        a: ({ href, children }) => (
+          <a href={href} target="_blank">
+            {children}
+          </a>
+        ),
       }}
     >
       {children}

@@ -43,13 +43,31 @@ export default function AboutMePage() {
         </div>
       </section>
 
+      <div className="section-block">
+        <div className="container">
+          <div className="section-block__header">
+            <div className="flex flex-row justify-start items-center">
+              <CustomMarkdown tag="h2" hasHashtag>
+                {t("education_section.title")}
+              </CustomMarkdown>
+            </div>
+          </div>
+          <div className="section-block__content flex-col">
+            <CustomMarkdown tag="h3">
+              {t("education_section.subtitle")}
+            </CustomMarkdown>
+            <p> {t("education_section.legend")}</p>
+          </div>
+        </div>
+      </div>
+
       <SkillsSection />
 
       <section className="section-block">
         <div className={`${styles["background-logo-shape"]} container`}>
           <div className="section-block__header">
             <div className="flex flex-row justify-start items-center">
-              <CustomMarkdown tag="h2" hasHashtag={true}>
+              <CustomMarkdown tag="h2" hasHashtag>
                 {t("fun_facts_section.title")}
               </CustomMarkdown>
             </div>
